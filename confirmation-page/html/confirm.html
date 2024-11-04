@@ -6,5 +6,35 @@
     <title>에약 확인</title>
 </head>
 <body>
+    <header></header>
+    <section id="section01" class="confrimation">
+        <form id="search-form">
+            <div class="find">
+                <h2>예약 내역 조회</h2>
+                <div>
+                    <input type="text" id="order-number" placeholder="예약 번호">
+                </div>
+                <div>
+                    <input type="text" id="phone-number" placeholder="핸드폰 번호">
+                </div>
+                <button type="submit">조회하기</button>
+            </div>
+        </form>
+        <div id="result">
+            <h2>예약 내역</h2>
+            <p>예약 번호: </p>
+            <p>고객 이름: </p>
+            <p>예약 날짜: </p>
+            <p>예약 상품: </p>
+            <p>예약 인원: </p>
+            <p>예약 금액: </p>
+            <p>예약 상태: </p>
+        </div>
+        <div class="cancel">
+            <button type="button">예약 취소</button>
+            <p>예약을 취소하면 이 작업은 되돌릴 수 없습니다. 신중하게 결정해 주세요.</p>
+        </div>
+    </section>
+    <footer></footer>
 </body>
 </html>
