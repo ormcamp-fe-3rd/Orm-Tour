@@ -1,0 +1,38 @@
+
+*{
+    margin: 0 auto ;
+}
+
+.header{
+    border: solid 1px;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-tab{
+    height: 100px;
+    width: 80%;
+    text-align: center;
+    border: solid 1px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+.header-tab a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.header-tab h1{
+    font-weight: 900;
+    font-size: 3rem;
+}
