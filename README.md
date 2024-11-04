@@ -20,5 +20,5 @@ Orm Tour 미니프로젝트
         - header / 예약 내역 조회 / footer
    
 [Figma 프로젝트 링크]
-- 회의자료 : https://www.figma.com/board/mGHN3YFrqYOroIWVbrzx3o/Orm-Tour-프로젝트?node-id=0-1&node-type=canvas
+- [Figma 회의자료](https://www.figma.com/board/mGHN3YFrqYOroIWVbrzx3o/Orm-Tour-프로젝트?node-id=0-1&node-type=canvas)
 - Figma 프로젝트 링크 : 디자인 작업 중(추후 기재)
