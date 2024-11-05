@@ -64,6 +64,11 @@ body {
     margin-bottom: 20px;
 }
 
+.section-1 a:hover {
+    color: #aaa;
+    cursor: pointer;
+}
+
 .modal1,
 .modal2,
 .modal3,
