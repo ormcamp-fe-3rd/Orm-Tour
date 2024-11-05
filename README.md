@@ -21,5 +21,4 @@ Orm Tour 미니프로젝트
 
 [Figma 프로젝트 링크]
 
-- [Figma 회의자료](https://www.figma.com/board/mGHN3YFrqYOroIWVbrzx3o/Orm-Tour-프로젝트?node-id=0-1&node-type=canvas)
-- Figma 프로젝트 링크 : 디자인 작업 중(추후 기재)
+- [Figma](https://www.figma.com/design/LWYlT2S63onBysgsfrKair/%EB%AF%B8%EB%8B%88%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%98%A4%EB%A6%84%ED%88%AC%EC%96%B4?node-id=10-4163&node-type=frame&t=1f9QJWaTHoWrEQRS-0)
