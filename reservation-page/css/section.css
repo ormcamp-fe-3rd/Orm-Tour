@@ -1,17 +1,29 @@
 *{
     margin:  0 auto;
-    box-sizing: border-box;
-    padding: 0;
+  
+   
 }
+main.active{
+    filter: brightness(.5);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+header.active{
+   filter: brightness(.5);
+   background-color: rgb(0,0,0, 0.7);
+}
+
 .header{
-    border-bottom: solid 1.5px;
-    color: gray;
-    padding: 10px;
+   position: relative;
+    height: 100px;
+
 }
 .header .guide{
+    border-bottom: solid 1px gray;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
     display: flex;
-    width: 70%;
-    
+    width: 100%;
     align-items: center;
 }
 .header .logo{
@@ -19,28 +31,17 @@
     font-size: 2rem;
     color: black;
 }
-.header button {
-    padding: 5px;
-    border-radius: 10px;
+.guide button{
+    background-color: rgb(255, 255, 0);
     border: none;
-    font-size: 1.5rem;
-    color: wheat;
-    background-color: orangered;
-    margin-right: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 20px;
 }
 
-.section01{
-    padding: 10px;
-   
+.section01{  
 }
-.line-tag{
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
-    text-align: center;
-}
+
 .line-tag a{
     font-size: 1.5rem;
     font-weight: 900;
@@ -71,7 +72,7 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    display: flex;
+   
     align-items: center;
 
 }
@@ -102,17 +103,32 @@ input[type = "radio"] {
 }
 
 /*가상클래스*/
-input[id = "tab1"]:checked ~ .box-img div:nth-child(1){
+input[id = "tab1"]:checked ~  .box-set .box-img div:nth-child(1){
     opacity: 1;
 }
-input[id = "tab2"]:checked ~ .box-img div:nth-child(2){
-    opacity: 1;
-}input[id = "tab3"]:checked ~ .box-img div:nth-child(3){
+input[id = "tab2"]:checked ~  .box-set .box-img div:nth-child(2){
     opacity: 1;
 }
-input[id = "tab1"]:checked ~ .box-btn label[for ="tab1"]{
-    background-color: wheat;
-    color: orangered;
+
+input[id = "tab3"]:checked ~  .box-set .box-img div:nth-child(3){
+    opacity: 1;
+}
+
+
+input[id = "tab1"]:checked ~ .box-btn label[for = "tab1"] {
+    background-color: #7f7f7f;
+    color: #7f7f7f;
+}
+input[id = "tab2"]:checked ~ .box-btn label[for = "tab2"] {
+    background-color: #7f7f7f;
+    color: #7f7f7f;
+}
+input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
+    background-color: #7f7f7f;
+    color: #7f7f7f;
+}
+.box-set{
+    display: flex;
 }
 
 .box-btn{
@@ -142,7 +158,8 @@ input[id = "tab1"]:checked ~ .box-btn label[for ="tab1"]{
     display: inline-block;
     text-align: center;
     width: 50%;  
-    height: 80%;
+    height: 100%;
+    
 }
 .box-intro .box-title{
     font-size: 2.5rem;
@@ -177,17 +194,12 @@ input[id = "tab1"]:checked ~ .box-btn label[for ="tab1"]{
     padding: 2px;
 }
 /*section02*/
-
-
-
 .section02{
-    
     height: 300px;
     padding: 15px;
 }
 .section02-box{
-    margin-top: 10px;
-    height: 80px;
+    height: 100%;
     width: 100%;
     display: flex;
     
@@ -240,7 +252,6 @@ input[id = "tab1"]:checked ~ .box-btn label[for ="tab1"]{
 }
 .check-box{
     margin-left: 10px;
-    
     font-size: 1.5rem;
     font-weight: 650;
 }
@@ -292,4 +303,69 @@ input[id = "tab1"]:checked ~ .box-btn label[for ="tab1"]{
     color: rgb(136, 133, 132);
 }
 
+/*modal*/
+.modal-1.active{
+    display: block;
+    
+}
+.modal-1{
+    display: none;
+    position: absolute;
+    top:50%;
+    background-color: #CFE9F4;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: 0.5s;
+    width: 350px;
+    border-radius: 20px;
+    height: 350px;
+}
+.modal-box{
+    background-color: #fff400;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    height: 70px;
+}
+.modal-1 ul, li{
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 900; 
+}
+.modal-list{
+    padding: 10px;
+}
+.modal-list li{
+    padding: 10px;
+}
+.modal-btn{
 
+    margin-top: 20px;
+    text-align: center;
+}
+.modal-btn button{
+    cursor: pointer;
+}
+.modal-btn .checkBox{
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 800;
+
+    font-size: 1.5rem;
+    background-color: #fff400;
+    margin-left: 10px;
+}
+.modal-btn .cancle{
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    width: 100px;
+    padding: 5px;
+    background-color: #7f7f7f;
+    font-size: 1.5rem;
+}
