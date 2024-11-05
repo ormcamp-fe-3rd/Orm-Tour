@@ -23,7 +23,7 @@ const resList = [
 
 document.getElementById('search-form').addEventListener('submit', 
     function(event) {
-        event.preventDefault();
+        event.preventDefault();  // form 제출 후 새로고침 방지
         
         const orderID = document.getElementById('order-number').value;
         const phoneNumber = document.getElementById('phone-number').value;
@@ -43,7 +43,7 @@ document.getElementById('search-form').addEventListener('submit',
             <p>${reservation.phoneNumber}</p>
             <p>${reservation.product}</p>
             <p>${reservation.guests}</p>
-            <p>${reservation.totalAmount}</p>
+            <p>${reservation.totalAmount}원</p>
             <p>${reservation.status}</p>
             `                       
         } else {
