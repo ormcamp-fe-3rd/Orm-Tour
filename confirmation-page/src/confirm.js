@@ -54,9 +54,9 @@ document.getElementById('search-form').addEventListener('submit',
     }
 );
 
-// 예약번호 대문자 변환
+// 예약번호 대문자 변환, 알파벳과 숫자만 입력
 document.getElementById('order-number').addEventListener('input', function(event) {
-    event.target.value = event.target.value.toUpperCase();
+    event.target.value = event.target.value.toUpperCase().replace(/[^A-Z0-9]/g,'');
 });
 
 // 전화번호 자동 하이픈
