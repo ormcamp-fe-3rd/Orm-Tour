@@ -44,13 +44,15 @@ document.getElementById('search-form').addEventListener('submit',
             <p>${reservation.product}</p>
             <p>${reservation.guests}</p>
             <p>${reservation.totalAmount}원</p>
-            <p>${reservation.status}</p>
+            <p id="status">${reservation.status}</p>
             `                       
         } else {
             result.innerHTML = `
             <p>예약 내역을 찾을 수 없습니다.</p>
             `
         };
+
+        checkStatus();  // 예약취소 버튼 상태 변경
     }
 );
 

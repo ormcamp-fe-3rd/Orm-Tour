@@ -8,7 +8,7 @@
 </head>
 <body>
     <header></header>
-    <section id="section01" class="confrimation">
+    <section class="confrimation">
         <form id="search-form">
             <p class="find-title">예약 내역 조회</p>
             <div class="find-wrap">
@@ -21,7 +21,7 @@
                     <input type="text" id="phone-number" name="phone-number">
                 </div>
             </div>
-            <button type="submit">조회하기</button>
+            <button type="submit">예약 조회</button>
         </form>
         <div class="result">            
             <p class="result-title">예약 내역</p>
@@ -35,18 +35,26 @@
                     <p>예약 인원 </p>
                     <p>예약 금액 </p>
                     <p>예약 상태 </p>
-                    <div id="result">
-                    </div>
+                </div>
+                <div id="result">
                 </div>
             </div>
         </div>
         <div class="cancel">
-            <button type="button">예약 취소</button>
-            <p>예약을 취소하면 이 작업은 되돌릴 수 없습니다. 신중하게 결정해 주세요.</p>
+            <button id="cancel-button" type="button">예약 취소</button>
+            <div id="modal">
+                <div class="modal-body">
+                    <h2>예약 취소</h2>
+                    <p>이 작업은 되돌릴 수 없습니다. 
+                        <br>정말로 예약을 취소하시겠습니까?</p>
+                    <button id="confirm-cancel" type="button">확인</button>
+                </div>
+            </div>
         </div>
     </div>
     </section>
     <footer></footer>
 </body>
-<script src="../src/confirm.js"></script>
+<script src="../src/reservation-search.js"></script>
+<script src="../src/reservation-cancel.js"></script>
 </html>
