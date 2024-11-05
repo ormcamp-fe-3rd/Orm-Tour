@@ -28,24 +28,26 @@ document.getElementById('search-form').addEventListener('submit',
         const orderID = document.getElementById('order-number').value;
         const phoneNumber = document.getElementById('phone-number').value;
         const result = document.getElementById('result');
+
+        console.log(orderID)
+        console.log(phoneNumber)
         
         const reservation = resList.find(a => 
             a.orderID === orderID && a.phoneNumber === phoneNumber);
 
         if (reservation) {
             result.innerHTML = `
-            <h2>예약 내역</h2>
-            <p>예약 번호: ${reservation.orderID}</p>
-            <p>고객 이름: ${reservation.name}</p>
-            <p>예약 날짜: ${reservation.date}</p>
-            <p>예약 상품: ${reservation.product}</p>
-            <p>예약 인원: ${reservation.guests}</p>
-            <p>예약 금액: ${reservation.totalAmount}</p>
-            <p>예약 상태: ${reservation.status}</p>
+            <p>${reservation.orderID}</p>
+            <p>${reservation.date}</p>
+            <p>${reservation.name}</p>
+            <p>${reservation.phoneNumber}</p>
+            <p>${reservation.product}</p>
+            <p>${reservation.guests}</p>
+            <p>${reservation.totalAmount}</p>
+            <p>${reservation.status}</p>
             `                       
         } else {
             result.innerHTML = `
-            <h2>예약 내역</h2>
             <p>예약 내역을 찾을 수 없습니다.</p>
             `
         };
