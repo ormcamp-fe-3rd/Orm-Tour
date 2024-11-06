@@ -1,0 +1,207 @@
+/* 모바일 화면 (기본 화면 크기 이하) */
+@media (max-width: 767px) {
+
+    .header {
+        max-height: 80px;
+    }
+
+    .header .guide {
+       
+        padding: 2px;
+      
+        
+        display: flex;
+        text-align: center;
+    }
+
+  
+    .logo img{
+        max-width: 100px;
+    }
+
+.line-tag button {
+        font-size: 15px;
+        padding: 5px;
+}
+
+.box-img {
+        width: 100%;
+        height: 250px;
+ }
+
+.box-btn {
+        width: 100%;
+        text-align: center;
+}
+
+.box-btn label {
+        font-size: 1rem;
+        width: 30px;
+        height: 30px;
+}
+
+.box-set {
+       
+        flex-direction: column;
+}
+
+.box-intro {
+        width: 100%;
+        margin-top: 20px;
+}
+
+.box-intro .box-title {
+        font-size: 2rem;
+}
+
+.box2-form {
+        width: 100%;
+        height: auto;
+        margin-left: 10px;
+}
+
+.box2 {
+    
+        height: 60%;
+        width: 100%;
+    
+}
+.box2-form ul li input{
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}   
+.box2-title{
+    font-weight: 900;
+    font-size: 1rem;
+}
+.box2:nth-child(1) .comment {
+font-size: .8rem;
+}
+.box2-form{
+  max-width: 30%;
+  height: 60%;
+}
+.box2-form ul li{
+    font-weight: 900;
+    font-size: .6rem;
+    margin-top: 2px;
+}
+.box2-form button {
+    font-size: .8rem;
+    width: 20px;
+    height: 20px;
+}
+
+.modal-1 {
+        width: 90%;
+        height: auto;
+        max-width: 350px;
+}
+
+.box2-submit button {
+    width: 80%;       
+}
+.box2:nth-child(2) .comment{
+    
+    font-size: .8rem;
+}
+.box2-img img{
+    width: 50px;
+    scale: 1.1;
+    height: 50px;
+   
+}
+.check-box{
+    margin-top: 70px;
+    font-size: .8rem;
+    font-weight: 650;
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .line-tag button {
+        font-size: 1.4rem;
+    }
+
+    .box-img {
+        width: 80%;
+        height: 300px;
+    }
+
+    .box-set {
+        flex-direction: column;
+    }
+
+    .box-intro {
+        width: 60%;
+    }
+
+    .box-btn label {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+
+    .box2 {
+        width: 60%;
+    }
+
+    .box2-form {
+        width: 40%;
+    }
+
+    .comment {
+        font-size: 1.4rem;
+    }
+
+    .box2-submit button {
+        width: 70%;
+    }
+}
+
+/* 데스크탑 화면 (1024px 이상) */
+@media (min-width: 1025px) {
+
+    .header .logo {
+        font-size: 2rem;
+    }
+
+    .line-tag button {
+        font-size: 1.5rem;
+    }
+
+    .box-img {
+        width: 65%;
+        height: 400px;
+    }
+
+    .box-set {
+        display: flex;
+    }
+
+    .box-btn label {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .box-intro {
+        width: 50%;
+    }
+
+    .box2 {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .box2-form {
+        width: 30%;
+    }
+
+    .box2-submit button {
+        width: 50%;
+    }
+}

@@ -64,11 +64,7 @@ header.active{
     width: 100%;
     align-items: center;
 }
-.header .logo{
-    font-weight: 800;
-    font-size: 2rem;
-    color: black;
-}
+
 .guide button{
     background-color: rgb(255, 255, 0);
     border: none;
@@ -97,8 +93,7 @@ header.active{
     opacity: 1;
 }
 /*section01*/
-.section01{  
-}
+
 
 .line-tag button{
     background-color: var(--color-button);
@@ -123,7 +118,6 @@ header.active{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-   
     align-items: center;
 
 }
@@ -183,26 +177,44 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 }
 
 .box-btn{
+    
     height: 30px;
-    width: 100%;
+    width: 150px;
+    margin-top: 2px;
+    position: absolute;
     text-align: center;
     z-index: 2;
 }
 .box-btn label{
-    border: solid 1px;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    position: absolute;
+    border-radius: 10px;
     z-index: 10;
     cursor: pointer;
-    background-color: rgb(31, 31, 30);;
+    background-color: rgb(14, 14, 13);;
     transition: 0.3s;
     color: wheat;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.box-btn label:nth-child(1){
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.box-btn label:nth-child(2){
+    left: 40px;
+    width: 25px;
+    height: 25px;
+    
+}
+.box-btn label:nth-child(3){
+    left: 70px;
+    width: 25px;
+    height: 25px;
+}
 .box-intro{
- 
     display: inline-block;
     text-align: center;
     width: 50%;  
@@ -230,6 +242,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     float: right;
 }
 .box-icon1{
+    
     font-size: 1rem;
 }
 .box-icon1 table{
@@ -243,6 +256,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 }
 /*section02*/
 .section02{
+    
     height: 300px;
     padding: 15px;
 }
@@ -282,6 +296,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     font-size: 1.5rem;
 }
 .box2{
+   
     margin-left: 10px;
     padding: 10px;
     width: 50%;
@@ -290,7 +305,9 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     border-radius: 10px;
 }
 .box2 .comment{
-    font-size:1.5rem;
+    transform: translateY(10px);
+    
+    font-size:1.2rem;
 }
 .comment div{
     margin-top: 10px;
@@ -305,16 +322,17 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 }
 .box2-img img{
     width: 100px;
-    scale: 1.2;
-    height: 200px;
+    scale: 1.1;
+    height: 100px;
    
 }
 .box2:nth-child(2) .comment{
-    margin-top: 20px;
+
     font-size: 2rem;
 }
 .check-box{
-    margin-left: 10px;
+  
+    margin-top: 60px;
     font-size: 1.5rem;
     font-weight: 650;
 }
@@ -340,6 +358,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     font-weight: 900;
     font-size: 1.5rem;
 }
+/*예약하기*/
 .box2-form ul li input{
     width: 90%;
     border-radius: 5px;
@@ -350,7 +369,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     text-align: center;
 }
 .box2-submit button{
-    margin-top: 15px;
+    margin-top: 10px;
     width: 40%;
     font-size: 1.1rem;
     background: rgb(255, 255, 0);
