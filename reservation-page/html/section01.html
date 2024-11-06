@@ -15,8 +15,8 @@
         <div class="guide">
           <div class="logo"><img src="../img/Group.svg" alt=""></div>
           <div class="line-tag">
-            
-            <button type="button">예약확인</button>
+              <span class = "check-tab">1</span>
+            <button type="button">예약조회<i class="fa-solid fa-cart-shopping"></i></button>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@
                 <div><span>교통편</span> 모두항공</div>
                 <div><span>출발일시</span> 2024.11.10(일) 19:50 /7C 2507</div>
                 <div><span>도착일시</span> 2024.11.14(목) 07:40 /2508</div>
-                <div>가격 : <span id = "price"></span></div>
+                <div>가격 : <span id = "price"></span>원</div>
               </div>
             </div>
             <!--box2-->
@@ -137,7 +137,7 @@
                 <li><button type = "button" class = "plus">+<button type = "button" class = "minus" id = "-">-</button></button></li>
               </ul>
               <div class = "box2-submit">
-              <button type = "button"  id= "submit">확인</button>
+              <button type = "button"  id= "submit" disabled>확인</button>
               </div>
 </form>
             </div>
@@ -229,9 +229,9 @@
               예약확인
           </div>
             <ul class = "modal-list">
-              <li>예약자명:김오름</li>
-              <li>연락처:010-5555-5555</li>
-              <li>이메일:ormkim@naver.com</li>
+              <li>예약자명: <span id = "nameVal"></span></li>
+              <li>연락처: <span id = "phoneVal"></span></li>
+              <li>이메일: <span id = "emailVal"></span></li>
               <li>예약상품:[퀘백출발] 캐나다 단풍</li>
             </ul>
             <div class ="modal-btn">

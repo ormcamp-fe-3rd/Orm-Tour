@@ -1,23 +1,28 @@
 const modal = document.querySelector('.modal-1');
-    const header = document.querySelector('header');
-    const main = document.querySelector('main')
-    let confirm = document.querySelector('.box2-submit button').addEventListener('click', function(){
+const header = document.querySelector('header');
+const main = document.querySelector('main')
+const checkBox = document.querySelector('.checkBox');
+const checkTab = document.querySelector('.check-tab');
+
+
+let confirm = document.querySelector('.box2-submit button').addEventListener('click', function(){
       modal.classList.remove('active');
       modal.classList.add('active');
       header.classList.add('active');
       main.classList.add('active');
       
-    });
+});
     
     let cancle = document.querySelector('.modal-btn .cancle').addEventListener('click', function(){
       modal.classList.remove('active');
       header.classList.remove('active');
       main.classList.remove('active');
-    });
+});
+
+
+
 
 //유효성 검사 
-
-
 const nameValid = document.querySelector('#name');
 const phoneValid = document.querySelector('#phone');
 const btn = document.querySelector('#submit'); // assuming the button has an id of 'submit'
@@ -43,7 +48,7 @@ function validName(name) {
 phoneValid.addEventListener('input', debounce(function() {
     const phoneValue = phoneValid.value;
     validatePhoneNumber(phoneValue); // 메소드 불러오기 
-    updateButtonState(); // Update button state based on both validations
+    updateButtonState(); 
 }));
 
 //
@@ -113,6 +118,8 @@ function debounce(func, delay = 300) {
 }
 
 
+
+// 인원수 파악 버튼 
 const plus = document.querySelector('.plus');
 const minus = document.querySelector('.minus');
 const result = document.getElementById('result');  // 결과를 보여줄 요소
@@ -124,7 +131,7 @@ let j = 330000;  // 가격
 result.innerText = i;
 price.innerText = j * i; 
 
-price.style.color = 'red';
+price.style.color = 'blue';
 plus.addEventListener('click', function(e) {
     // 수량이 10보다 작을 때만 증가
     if (i < 10) {
@@ -147,6 +154,67 @@ minus.addEventListener('click', function(e) {
     }
     
 });
+
+
+// 모달창 화면에 보이게 제작하기 
+nameValid.addEventListener('change', function() {
+        try {
+            // 'name' 입력 필드의 값을 가져옴
+            const Form1 = document.getElementById('name').value;
+
+            const nameVal = document.getElementById('nameVal');
+            if (nameVal) {
+                nameVal.innerText = Form1;
+            } else {
+                throw new Error('해당 화면 노출 값 못 찾음');
+            }
+        } catch (error) {
+          
+            console.error('에러 메세지:', error.message);
+        }
+});
+
+phoneValid.addEventListener('change', function(){
+    try{
+        //  값 가져옴
+        const Form2 = document.getElementById('phone').value;
+        const phoneVal = document.getElementById('phoneVal');
+        if(phoneVal){
+            phoneVal.innerText = Form2;
+        }
+        else{
+            throw new Error('해당 값 없음');
+        }
+    }
+    catch(error){
+        console.log('값 없어요' , error.message);
+    }
+});
+
+emailValid.addEventListener('change', function(){
+    try{
+        const Form3 = document.getElementById('email').value;
+        const emailVal = document.getElementById('emailVal');
+        if(emailVal){
+            emailVal.innerText = Form3
+        }
+        else{
+            throw new Error('해당 값 없음')
+        }
+    }
+    catch(error){
+        console.log('값 없어요', error.message);
+    }
+})
+
+//예약하기 버튼
+checkBox.addEventListener('click', function(){
+    modal.classList.remove('active');
+    main.classList.remove('active');
+    header.classList.remove('active');
+    checkTab.classList.add('active');
+});
+
 
 
 
