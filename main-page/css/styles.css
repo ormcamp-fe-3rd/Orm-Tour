@@ -118,6 +118,10 @@ body {
     box-sizing: border-box; /* 패딩과 마진을 포함해 박스를 계산 */
 }
 
+.slide:active {
+    width: calc((100% - 20px) / 3 * 1.1);
+}
+
 .slide img {
     width: 100%;
     height: auto;
