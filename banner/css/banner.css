@@ -1,0 +1,158 @@
+* {
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Bitgoeul_Bold", sans-serif;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: "InkLipquid";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bitgoeul_Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 비디오 크기 및 스타일 설정 */
+video {
+  width: 100vw; /* 뷰포트의 100% 너비 */
+  height: 100vh; /* 뷰포트의 100% 높이 */
+  object-fit: cover; /* 비디오를 화면에 맞추고 넘치는 부분을 잘라냄 */
+  opacity: 1; /* 초기 불투명도 */
+}
+
+/* 비디오가 사라질 때 애니메이션 */
+.fade-out {
+  animation: fade-out-animation 2s ease forwards; /* 2초 동안 애니메이션 실행*/
+}
+
+/* 점점 불투명해지는 애니메이션 설정*/
+@keyframes fade-out-animation {
+  0% {
+    opacity: 1;
+  } /* 시작할 때 완전 불투명*/
+  0.5% {
+    opacity: 0.1;
+  } /* 중간에서 반투명*/
+  100% {
+    opacity: 0;
+  } /* 끝날 때 완전 투명 */
+}
+
+.header {
+  top: 0px;
+  border: solid 1px;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* --- 메인 페이지 모든 곳에 추가 해야되는 부분*/
+  opacity: 0; /* 처음에는 숨김 */
+  transition: opacity 2s ease; /* 서서히 나타나도록 애니메이션 */
+}
+/* header가 보이도록 설정 */
+.show-header {
+  opacity: 1; /* 완전히 보이게 */
+}
+/*메인 페이지 모든 곳에 추가 해야되는 부분  ---- */
+
+.header-tab {
+  height: 100px;
+  width: 80%;
+  text-align: center;
+  /* border: solid 1px; */
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.header-tab a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.header-tab a:hover {
+  text-decoration: underline #fffccb 5px;
+}
+
+.header-tab a:active {
+  text-decoration: underline #fff400 5px;
+}
+
+.header-logo {
+  margin: 15px 60px 15px 70px;
+  width: 200px;
+  height: 70px;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.banner {
+  font-family: "InkLipquid";
+  display: none;
+  opacity: 0; /* 요소를 투명하게 만들어 보이지 않음 */
+  width: 100%;
+  height: 740px;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 */
+}
+
+/* show-banner 클래스가 추가되면 banner가 서서히 나타남 */
+.show-banner {
+  display: flex;
+  opacity: 1; /* 완전히 불투명하게 설정 */
+}
+
+.banner-text {
+  font-size: 35px;
+  text-align: center;
+  margin: 190px;
+  display: flex;
+  justify-content: center;
+}
+/* 각 글자에 애니메이션 효과 */
+.banner-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInMove 0.8s ease forwards;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
