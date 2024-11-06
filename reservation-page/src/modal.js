@@ -68,6 +68,7 @@ function validatePhoneNumber(phoneValue) {
         phoneValid.style.outline = 'solid 2px yellow';
     }
 }
+//이메일 유효성검사 
 function validateEmail(emailValue) {
     if(!validEmail(emailValue) || emailValue === "") {
         emailValid.style.outline = "solide 2px red";
@@ -86,13 +87,13 @@ function validateName(nameValue) {
     }
 }
 
-// Update the button's disabled state based on the validity of the fields
+// 버튼 활성화 메소드
 function updateButtonState() {
     const isPhoneValid = validTest(phoneValid.value);
     const isNameValid = validName(nameValid.value);
     const isEmailValid = validEmail(emailValid.value);
     
-    // Enable the button only if both phone and name are valid
+    
     if (isPhoneValid && isNameValid && isEmailValid) {
         btn.disabled = false;
     } else {
@@ -100,7 +101,7 @@ function updateButtonState() {
     }
 }
 
-// 
+// 로직
 function debounce(func, delay = 300) {
     let timeoutId;
     return function(...args) {
@@ -111,6 +112,41 @@ function debounce(func, delay = 300) {
     };
 }
 
+
+const plus = document.querySelector('.plus');
+const minus = document.querySelector('.minus');
+const result = document.getElementById('result');  // 결과를 보여줄 요소
+const price = document.getElementById('price');  // 가격을 보여줄 요소
+
+let i = 0;  // 초기값
+let j = 330000;  // 가격
+
+result.innerText = i;
+price.innerText = j * i; 
+
+price.style.color = 'red';
+plus.addEventListener('click', function(e) {
+    // 수량이 10보다 작을 때만 증가
+    if (i < 10) {
+        i++;  
+        result.innerText = i;  // 수량 화면에 업데이트
+     
+        price.innerText = j * i;  
+    }
+   
+});
+
+// 'minus' 버튼 클릭 시
+minus.addEventListener('click', function(e) {
+    // 수량이 1보다 클 때만 감소
+    if (i > 0) {
+        i--;  // 수량 감소
+      
+        result.innerText = i;  // 수량 화면에 업데이트
+        price.innerText = j * i; 
+    }
+    
+});
 
 
 

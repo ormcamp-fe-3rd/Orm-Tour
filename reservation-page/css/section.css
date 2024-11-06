@@ -1,6 +1,39 @@
 *{
     margin:  0 auto;
 }
+:root{
+
+    --color-cancle: var(--color-gray);
+    --color-tab: var(--color-blue);
+    --color-button: var(--color-yellow);
+
+    /*colors*/
+    --color-blue: rgb(207, 233, 244);
+    --color-gray:rgb(127, 127, 127);
+    --color-yellow:rgb(255, 244, 0);
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+button:focus {
+  outline: 1px solid transparent;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 body{
     font-family: 'Bitgoeul_Bold', sans-serif;
 }
@@ -21,6 +54,7 @@ header.active{
 
 }
 .header .guide{
+    
     border-bottom: solid 1px gray;
     background-color: white;
     z-index: 100;
@@ -53,7 +87,7 @@ header.active{
     text-decoration: none;
 }
 .line-tag button{
-    background-color: rgb(221, 221, 8);
+    background-color: var(--color-button);
     color: black;
     font-weight: 900;
         padding: 5px;
@@ -65,8 +99,7 @@ header.active{
     margin-right: 10px;
 }
 .line-tag button:hover{
-    background-color: rgb(136, 133, 132);
-    color: black;
+    background-color: var(--color-gray);
 }
 
 /*section01*/
@@ -120,15 +153,15 @@ input[id = "tab3"]:checked ~  .box-set .box-img div:nth-child(3){
 
 
 input[id = "tab1"]:checked ~ .box-btn label[for = "tab1"] {
-    background-color: #7f7f7f;
+    background-color: var(--color-blue);
     color: #7f7f7f;
 }
 input[id = "tab2"]:checked ~ .box-btn label[for = "tab2"] {
-    background-color: #7f7f7f;
+      background-color: var(--color-blue);
     color: #7f7f7f;
 }
 input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
-    background-color: #7f7f7f;
+      background-color: var(--color-blue);
     color: #7f7f7f;
 }
 .box-set{
@@ -152,9 +185,6 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     background-color: rgb(31, 31, 30);;
     transition: 0.3s;
     color: wheat;
-}
-.box-btn label:hover {
-    background-color: rgb(136, 133, 132);
 }
 
 .box-intro{
@@ -227,7 +257,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     padding: 10px;
     width: 50%;
     height: 260px;
-    background-color: rgb(136, 133, 132);
+    background-color: var(--color-tab);
     border-radius: 10px;
 }
 .box2 .comment{
@@ -267,7 +297,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     border-radius: 10px;
     padding: 10px;
     margin-left: 10px;
-    background-color: rgb(136, 133, 132);
+    background-color: var(--color-tab);
 }
 .box2-form ul{
     list-style: none;
@@ -332,6 +362,8 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     font-weight: 900;
     height: 70px;
 }
+
+
 .modal-1 ul, li{
     list-style: none;
     font-size: 1rem;
