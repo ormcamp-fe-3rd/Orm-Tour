@@ -1,7 +1,7 @@
 // 슬라이드 섹션 (section025)
 const slides = document.querySelector('.slides');
-const items = document.querySelectorAll('.slide');
-const slideCount = document.querySelectorAll('.slide').length - 2;
+const items = document.querySelectorAll('.slide');  // 추가
+const slideCount = document.querySelectorAll('.slide').length - 2; // 슬라이드 추가 제외
 const progressSegments = document.querySelectorAll('.progress-segment');
 const counter = document.querySelector('.counter');
 const pauseButton = document.getElementById('pause');
@@ -9,6 +9,10 @@ const pauseButton = document.getElementById('pause');
 let slideIndex = 0;
 let autoSlide;
 let isPaused = false;
+
+function updateCounter() {
+    counter.textContent = `${slideIndex + 1} / ${slideCount}`;
+}
 
 function showNextSlide() {
     slideIndex = (slideIndex + 1 + slideCount) % slideCount;
@@ -23,24 +27,19 @@ function showPreviousSlide() {
 function updateSlidePosition() {
     const slideWidthPercent = 100 / 3;
     slides.style.transform = `translateX(-${slideIndex * slideWidthPercent}%)`;
-
+    
     // 현재 카드 스타일링 강조
-    const activeItem = items[slideIndex + 1];
-
     items.forEach(item => {
         item.classList.remove('active');
     });
 
+    const activeItem = items[slideIndex + 1];
     if (activeItem) {
         activeItem.classList.add('active');
     };
-    
+
     updateCounter();
     updateProgress();
-}
-
-function updateCounter() {
-    counter.textContent = `${slideIndex + 1} / ${slideCount}`;
 }
 
 function updateProgress() {

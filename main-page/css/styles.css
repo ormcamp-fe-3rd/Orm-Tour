@@ -118,8 +118,11 @@ body {
     box-sizing: border-box; /* 패딩과 마진을 포함해 박스를 계산 */
 }
 
-.slide:active {
-    width: calc((100% - 20px) / 3 * 1.1);
+.slide.active {
+    min-width: calc((100% - 20px) / 3 + 18px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin: 15px 0;
 }
 
 .slide img {
