@@ -102,3 +102,114 @@ span.modalCloseBtn {
 
     cursor: pointer;
 }
+
+/*리뷰*/
+.reviewBox h2 {
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+.review {
+    display: flex;
+    padding-right: 20px;
+    margin-bottom: 50px;
+}
+
+.reviewContainer {
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.reviewHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rating {
+    color: #5c2bb6;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.userInfo {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.userInfo span {
+    margin-right: 10px;
+}
+
+.reviewTitle {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reviewText {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.photos {
+    display: flex;
+    gap: 10px;
+}
+
+.photos img {
+    width: 33%;
+    height: 100px;
+    object-fit: fill;
+    border-radius: 4px;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+
+    .review {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .review {
+        display: block;
+        text-align: center;
+    }
+
+    .review img:first-child {
+        width: 100%;
+    }
+
+    .photos {
+        display: block;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+}
