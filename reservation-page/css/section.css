@@ -299,17 +299,17 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
    
     margin-left: 10px;
     padding: 10px;
-    width: 50%;
+    width: 60%;
     height: 260px;
     background-color: var(--color-tab);
     border-radius: 10px;
 }
-.box2 .comment{
-    transform: translateY(10px);
-    
+.box-comment{
+    position: relative;
+    top:50px;
     font-size:1.2rem;
 }
-.comment div{
+.box-comment div{
     margin-top: 10px;
 }
 .comment span{
@@ -317,29 +317,38 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     font-weight: 900;
 }
 
-.box2:nth-child(2) .box2-comment{
-    display: flex;
-}
+
 .box2-img img{
     width: 100px;
     scale: 1.1;
     height: 100px;
-   
 }
 .box2:nth-child(2) .comment{
 
+    font-size: 1.8rem;
+}
+.box2-comment1{
+    display: flex;
+    position: relative;
+    height: 100px;
+    top:60px;
     font-size: 2rem;
 }
+.box2-comment1 .comment{
+    height: 70px;
+    
+}
+
 .check-box{
-  
-    margin-top: 60px;
-    font-size: 1.5rem;
-    font-weight: 650;
+    transform: translateX(30px);
+    display: flex;
+    margin-top: 100px;
+    font-size: 1.1rem;
 }
 /*box2- 세번째*/
 .box2-form{
   
-    width: 30%;
+    width: 35%;
     height: 260px;
     border-radius: 10px;
     padding: 10px;
@@ -360,7 +369,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 }
 /*예약하기*/
 .box2-form ul li input{
-    width: 90%;
+    width: 95%;
     border-radius: 5px;
     border: none;
     padding: 3px;
@@ -457,7 +466,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 
 
 @font-face {
-    font-family: 'InkLipquid';
+    font-family: 'Bitgeoul_Light';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -471,7 +480,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 }
 
 @font-face {
-    font-family: 'Nanum Gothic';
+    font-family: 'Bitgoeul_Medium';
     src: url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
     font-weight: normal;
     font-style: normal;
@@ -544,4 +553,130 @@ span.modalCloseBtn {
     right: 30px;
     top: 100px;
     cursor: pointer;
+}
+
+.section03-title{
+padding: 10px;
+margin-left: 10px;
+font-size: 1.5rem;
+}
+
+/*채팅*/
+.comment-container{
+    height: 70%;
+    border-radius: 10px;
+    background-color: var(--color-blue);
+    margin-top: 20px;
+    overflow: auto;
+}
+.chat-part{
+    padding: 20px;
+    height: 550px;
+}
+.chat-chart{
+    padding: 15px;
+    height: 90px;
+    border-radius: 5px;
+    background-color: rgb(203, 201, 201);
+}
+textarea{
+    width: 100%;
+    height:100%;
+    resize: none;
+}
+.chat-btn{
+    float: right;
+    width: 120px;  
+}
+.chat-btn button{
+    transition: 0.3s;
+}
+
+.camera:hover {
+    background-color: var(--color-cancle);
+}
+.upload:hover{
+    background-color: rgb(124, 124, 244);
+}
+.camera{
+background-color: var(--color-button);
+border: none;
+border-radius: 2px;
+width: 50px;
+padding: 5px;
+margin-right: 10px;
+    
+}
+.upload {
+    border-radius: 2px;
+    border: none;
+    background-color: var(--color-blue);
+    padding: 5px;
+}
+/*댓글창*/
+
+.chat-comment{
+    margin-top: 10px;
+   opacity: 1;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-img{
+   text-align: center;
+    width: 70px;
+    height: 70px;
+}
+.chat-img img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.chat input[type ="text"]{
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+.chat-content{
+    width: 80%;
+}
+#content-comment {
+    height: 40px;
+    transform: translateY(10px);
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    float: left;
+    justify-content: center;
+}
+.like-btn{
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.3s;
+    font-size: 15px;
+    border: none;
+    background-color: #fff400;
+}
+.bomb-btn{
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+     transition: 0.3s;
+    background-color: #fff400;
+}
+.like-btn i:hover{
+    transition: 0.3s;
+    color: red;
+}
+.bomb-btn i:hover{
+      transition: 0.3s;
+    color: blue;
 }

@@ -13,7 +13,7 @@ let confirm = document.querySelector('.box2-submit button').addEventListener('cl
       
 });
     
-    let cancle = document.querySelector('.modal-btn .cancle').addEventListener('click', function(){
+let cancle = document.querySelector('.modal-btn .cancle').addEventListener('click', function(){
       modal.classList.remove('active');
       header.classList.remove('active');
       main.classList.remove('active');
@@ -125,14 +125,14 @@ const minus = document.querySelector('.minus');
 const result = document.getElementById('result');  // 결과를 보여줄 요소
 const price = document.getElementById('price');  // 가격을 보여줄 요소
 
-let i = 0;  // 초기값
+let i = 1;  // 초기값
 let j = 330000;  // 가격
 
 result.innerText = i;
 price.innerText = j * i; 
 
 price.style.color = 'blue';
-plus.addEventListener('click', function(e) {
+plus.addEventListener('click', function() {
     // 수량이 10보다 작을 때만 증가
     if (i < 10) {
         i++;  
@@ -144,7 +144,7 @@ plus.addEventListener('click', function(e) {
 });
 
 // 'minus' 버튼 클릭 시
-minus.addEventListener('click', function(e) {
+minus.addEventListener('click', function() {
     // 수량이 1보다 클 때만 감소
     if (i > 0) {
         i--;  // 수량 감소
@@ -231,5 +231,164 @@ document.addEventListener("click", function (event) {
     if (event.target.classList.contains("modalPop")) {
         const targetModalId = event.target.getAttribute("data-target");
         document.querySelector(`div.${targetModalId}`).style.display = "block";
+    }
+});
+
+
+// const chatChart = document.querySelector('textarea') || document.querySelector('input'); 
+
+// chatChart.addEventListener('change', function(e) { 
+//     try {
+//         e.target.value('');
+//         const chatting = chatChart.value; 
+//         const chattingVal = document.getElementById('content-comment'); 
+        
+//         if (chattingVal) {
+//             chattingVal.innerText = chatting; // 
+//         } else {
+//             throw new Error('content-comment 요소를 찾을 수 없습니다.'); 
+//         }
+//     } catch (error) {
+//         console.error('에러 발생: ', error.message); // 에러 메시지 출력
+//     }
+// });
+
+// const writer = document.querySelector('#writer');
+// writer.addEventListener('change', function(){
+//     try{
+//         e.target.value('');
+//         const writting = writer.value;
+//         const writeBoard = document.querySelector('#writer-board');
+
+//         if(writeBoard){
+//             writeBoard.innerText = writting;
+//         }
+//         else{
+//             throw new Error('writer-board가 없어요');
+//         }
+//     }
+//     catch(error){
+//         console.log('error 발생', error.message);
+//     }
+// })
+
+
+
+// 더 좋은 방법 있으면 알려주세요 ... ㅠㅠㅠ 
+const btnUpload = document.querySelector('.upload');
+
+const chatContainer = document.querySelector('.comment-container'); // 채팅 댓글을 추가할 부모 요소
+
+// btnUpload.addEventListener('click', function() {
+//     const chatChart = document.getElementById('chat'); // 사용자 입력을 받는 텍스트 영역
+//     const comment = chatChart.value.trim(); // 공백 제거 후 값 저장
+//     const write = document.getElementById('writer');
+//     const writer = write.value.trim();
+//     // 댓글이 비어 있지 않으면 실행
+//     if (comment !== '' || writer !=='') {
+
+
+//         const chatCommentDiv = document.createElement('div');
+//         chatCommentDiv.classList.add('chat-comment'); // 새로운 채팅 댓글에 클래스 추가
+
+//         // 채팅 이미지와 사용자 이름
+//         const chatImgDiv = document.createElement('div');
+//         chatImgDiv.classList.add('chat-img');
+//         const userSpan = document.createElement('span');
+        
+//         const userImg = document.createElement('img');
+//         userImg.src = '../img/user.jpg'; 
+//         userImg.alt = 'user image'; 
+
+        
+//         // 채팅 박스
+//         const chatContentDiv = document.createElement('div');
+//         chatContentDiv.classList.add('chat-content');
+        
+//         // content-comment 요소 (댓글 내용)
+//         const contentCommentDiv = document.createElement('div');
+//         contentCommentDiv.id = 'content-comment'; // id를 content-comment로 설정
+       
+//         contentCommentDiv.textContent = comment; // 사용자가 입력한 댓글 내용 설정
+
+//         const contentReviewDiv = document.createElement('div');
+//         contentReviewDiv.classList.add('content-rivew');
+      
+//         // chat-content
+//         chatContentDiv.appendChild(contentCommentDiv);
+//         chatContentDiv.appendChild(contentReviewDiv);
+//         // 이미지와 사용자 이름을 chat-img div에 추가
+//         chatImgDiv.appendChild(userSpan);
+//         chatImgDiv.appendChild(userImg);
+        
+//         // chat-comment
+//         chatCommentDiv.appendChild(chatImgDiv);
+//         chatCommentDiv.appendChild(chatContentDiv);
+
+//         // chat-container
+//         chatContainer.appendChild(chatCommentDiv);
+
+
+//         chatChart.value = ''; // 댓글 입력란 초기화
+//         writer.value = '';
+//     }
+
+// });
+
+const btnnUpload = document.querySelector('.upload');
+const chattContainer = document.querySelector('.comment-container'); // 부모 요소 (채팅 댓글을 추가할 부분)
+
+btnnUpload.addEventListener('click', function() {
+    const chatChart = document.getElementById('chat'); // 사용자 입력을 받는 텍스트 영역
+    const comment = chatChart.value.trim(); // 공백 제거 후 값 저장
+    const write = document.getElementById('writer'); 
+    const writer = write.value.trim(); // 작성자명 저장
+
+    // 댓글이 비어 있지 않으면 실행
+    if (comment !== '' && writer !== '') {
+        // 새로운 채팅 댓글 생성
+        const chatCommentDiv = document.createElement('div');
+        chatCommentDiv.classList.add('chat-comment');
+
+        // 채팅 이미지와 사용자 이름
+        const chatImgDiv = document.createElement('div');
+        chatImgDiv.classList.add('chat-img');
+        const userSpan = document.createElement('span');
+        userSpan.textContent = writer; // 사용자 이름을 여기에 추가
+        const userImg = document.createElement('img');
+        userImg.src = '../img/user.jpg'; 
+        userImg.alt = 'user image';
+
+        // 채팅 박스
+        const chatContentDiv = document.createElement('div');
+        chatContentDiv.classList.add('chat-content');
+
+        // 댓글 내용
+        const contentCommentDiv = document.createElement('div');
+        contentCommentDiv.classList.add('content-comment'); // id 대신 class로 변경
+        contentCommentDiv.textContent = comment; // 사용자가 입력한 댓글 내용 설정
+
+        // 리뷰 내용 (여기에 기능 추가 가능)
+        const contentReviewDiv = document.createElement('div');
+        contentReviewDiv.classList.add('content-review');
+
+        // chat-content에 댓글 내용과 리뷰 내용 추가
+        chatContentDiv.appendChild(contentCommentDiv);
+        chatContentDiv.appendChild(contentReviewDiv);
+
+        // chat-img에 사용자 이미지와 이름 추가
+        chatImgDiv.appendChild(userSpan);
+        chatImgDiv.appendChild(userImg);
+
+        // chat-comment에 이미지와 채팅 내용 추가
+        chatCommentDiv.appendChild(chatImgDiv);
+        chatCommentDiv.appendChild(chatContentDiv);
+
+        // comment-container에 댓글 추가
+        chattContainer.appendChild(chatCommentDiv);
+
+        // 댓글 입력란 초기화
+        chatChart.value = '';
+        write.value = '';
     }
 });
