@@ -92,7 +92,6 @@ body {
 
 
 /* 이벤트 */
-
 .slider {
     position: relative;
     width: 100%;
@@ -119,7 +118,7 @@ body {
 }
 
 .slide.active {
-    min-width: calc((100% - 20px) / 3 + 18px);
+    min-width: calc((100% - 20px) / 3 + 20px);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     margin: 15px 0;
