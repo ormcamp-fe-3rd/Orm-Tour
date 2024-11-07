@@ -1,0 +1,314 @@
+* {
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Bitgoeul_Bold", sans-serif;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: "InkLipquid";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bitgoeul_Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 비디오 크기 및 스타일 설정 */
+video {
+  width: 100vw; /* 뷰포트의 100% 너비 */
+  height: 100vh; /* 뷰포트의 100% 높이 */
+  object-fit: cover; /* 비디오를 화면에 맞추고 넘치는 부분을 잘라냄 */
+  opacity: 1; /* 초기 불투명도 */
+}
+
+/* 비디오가 사라질 때 애니메이션 */
+.fade-out {
+  animation: fade-out-animation 2s ease forwards; /* 2초 동안 애니메이션 실행*/
+}
+
+/* 점점 불투명해지는 애니메이션 설정*/
+@keyframes fade-out-animation {
+  0% {
+    opacity: 1;
+  } /* 시작할 때 완전 불투명*/
+  0.5% {
+    opacity: 0.1;
+  } /* 중간에서 반투명*/
+  100% {
+    opacity: 0;
+  } /* 끝날 때 완전 투명 */
+}
+
+.header {
+  top: 0px;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* --- 메인 페이지 모든 곳에 추가 해야되는 부분*/
+  opacity: 0; /* 처음에는 숨김 */
+  transition: opacity 2s ease; /* 서서히 나타나도록 애니메이션 */
+}
+/* header가 보이도록 설정 */
+.show-header {
+  opacity: 1; /* 완전히 보이게 */
+}
+/*메인 페이지 모든 곳에 추가 해야되는 부분  ---- */
+
+.header-tab {
+  height: 100px;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.header-tab a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.header-tab a:hover {
+  text-decoration: underline #fffccb 5px;
+}
+
+.header-tab a:active {
+  text-decoration: underline #fff400 5px;
+}
+
+.header-logo {
+  margin: 15px 60px 15px 70px;
+  width: 200px;
+  height: 70px;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.banner {
+  font-family: "InkLipquid";
+  /* --- main 부분에 공통적으로 해줄 내용*/
+  display: none;
+  opacity: 0; /* 요소를 투명하게 만들어 보이지 않음 */
+  transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 */
+  /* main 부분에 공통적으로 해줄 내용 --- */
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+/* --- main 부분에 공통적으로 해줄 내용*/
+.show-banner {
+  display: flex;
+  flex-direction: column;
+  opacity: 1; /* 완전히 불투명하게 설정 */
+}
+/* main 부분에 공통적으로 해줄 내용 --- */
+
+.banner-text {
+  font-size: 2.5rem;
+  /* font-size: 3vw; */
+  text-align: center;
+  margin-top: 12.5rem;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+/* --- 각 글자에 애니메이션 효과 */
+.banner-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInMove 0.8s ease forwards;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner-text span {
+  display: inline-block;
+  position: relative; /* position 추가 */
+  /* transition: transform 4s, color 0.1s; */
+  transition: transform 3s cubic-bezier(0.68, -0.55, 0.27, 1.55), color 0s; /* 글자의 움직임을 부드럽게 해주기 위해 cubic-bezier 사용 */
+}
+
+.banner-text span.hover-animation {
+  transform: translateY(-20px) scale(1.5) !important;
+  color: #fff400;
+  /* transition: transform 0.3s, color 0.3s; */
+}
+
+/* 각 글자에 애니메이션 효과 ---- */
+
+.banner-img {
+  /* width: 1000px;
+  height: 600px; */
+  width: 100%;
+  height: auto;
+  max-width: 1000px; /* 최대 너비를 1000px로 설정 */
+}
+
+/*----------------------footer 부분---------------------*/
+
+.footer {
+  margin: 0px;
+  /* height: 200px;
+  padding: 100px 21.875rem 100px 21.875rem; */
+  height: auto; /* 높이를 auto로 설정하여 컨텐츠에 맞게 늘어나도록 함 */
+  padding: 100px 20% 200px 20%; /* 여백을 상대적인 크기 (5%)로 설정 */
+  align-content: center;
+  flex-direction: column;
+  text-align: left;
+  display: none;
+  opacity: 0; /* 요소를 투명하게 만들어 보이지 않음 */
+  transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 */
+  min-width: 550px;
+}
+
+.show-footer {
+  display: flex;
+  opacity: 1; /* 완전히 불투명하게 설정 */
+}
+
+.footer-title {
+  margin: 0px;
+  flex-grow: 1;
+  font-size: 1.75rem;
+  padding-bottom: 50px;
+}
+
+.footer-bottom {
+  flex-grow: 1;
+  margin: 0px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  height: auto; /* 높이를 auto로 설정하여 내부 내용에 맞게 늘어나도록 함 */
+}
+
+.footer-text1,
+.footer-text2 {
+  flex-grow: 1;
+  margin: 0px;
+  height: auto;
+  font-size: 0.9375rem;
+  align-content: center;
+}
+
+.footer-logo {
+  margin: 0px;
+  margin-left: 30px;
+  width: 150px;
+  height: 100px;
+  background-color: transparent;
+  background-image: url("../../main-page/src/images/ormlogo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 미디어 쿼리 - 화면 크기별로 스타일 조정 */
+
+/* 화면 크기가 1024px 이하일 때 */
+@media (max-width: 1024px) {
+  .header-tab {
+    width: 90%; /* 헤더 크기 조정 */
+  }
+  .header-logo {
+    margin: 15px 50px 15px 70px;
+    width: 170px;
+    height: 60px;
+  }
+
+  .header-tab a {
+    font-size: 0.875rem;
+  }
+
+  .banner-text {
+    font-size: 1.875rem; /* 배너 글씨 크기 조정 */
+  }
+
+  .footer-title {
+    font-size: 1.125rem; /* 푸터 제목 글씨 크기 조정 */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* 세로로 배치 */
+    align-items: flex-start;
+  }
+
+  .footer-text1,
+  .footer-text2 {
+    font-size: 0.6875rem;
+  }
+
+  .footer-logo {
+    width: 170px;
+    height: 110px; /* 로고 크기 조정 */
+    margin-left: 0;
+  }
+}
+
+/* 화면 크기가 768px 이하일 때 */
+@media (max-width: 768px) {
+  .header-tab a {
+    font-size: 10px;
+  }
+  .header-logo {
+    margin: 15px 40px 15px 70px;
+    width: 140px;
+    height: 50px;
+  }
+  .banner-text {
+    font-size: 1.5rem; /* 배너 글씨 크기 조정 */
+    margin-top: 8rem;
+  }
+
+  .footer-title {
+    font-size: 1rem; /* 푸터 제목 글씨 크기 조정 */
+  }
+
+  .footer-logo {
+    width: 140px;
+    height: 100px; /* 로고 크기 조정 */
+    margin-left: 0;
+  }
+}
