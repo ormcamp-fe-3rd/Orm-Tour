@@ -1,0 +1,152 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/main-page.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- WebM 비디오 추가 (루프 속성 제거) -->
+    <video
+      id="backgroundVideo"
+      src="../src/images/0003.webm"
+      autoplay
+      muted
+      playsinline
+    ></video>
+    <header>
+      <div class="header">
+        <div class="header-tab">
+          <img
+            class="header-logo"
+            src="../../main-page/src/images/ormlogo.png"
+            alt=""
+          />
+          <a href="#section02">패키지 상품</a>
+          <a href="#section03">이벤트</a>
+          <a href="#section04">유용한 정보</a>
+          <a href="#section05">고객센터</a>
+          <a href="../../confirmation-page/html/confirm.html">예약확인</a>
+        </div>
+      </div>
+    </header>
+    <section id="section01">
+      <div class="banner">
+        <div class="banner-text">
+          <!-- "당신의 여정에 옮을 더하는 맞춤 패키지 여행" -->
+          <span>"</span><span>당</span><span>신</span><span>의</span
+          ><span>&nbsp;</span> <span>여</span><span>정</span><span>에</span
+          ><span>&nbsp;</span><span>옮</span><span>음</span><span>을</span
+          ><span>&nbsp;</span><span>더</span><span>하</span><span>는</span
+          ><span>&nbsp;</span> <span>맞</span><span>춤</span><span>&nbsp;</span
+          ><span>패</span><span>키</span><span>지</span><span>&nbsp;</span
+          ><span>여</span><span>행</span><span>"</span>
+        </div>
+        <img class="banner-img" src="../src/images/Group2.png" alt="" />
+      </div>
+    </section>
+    <section id="section02">
+      <h2 class="section-title">패키지상품</h2>
+      <div class="carousel-container">
+          <button class="carousel-button left"><img src="../src/images/buttonleft.png" alt="Left"></button>
+          <div class="products">
+              <div class="carousel">
+                  <a href="product1.html" class="product-link">
+                      <img src="../src/images/product11.gif" alt="Product 1" class="product">
+                  </a>
+                  <a href="product2.html" class="product-link">
+                      <img src="../src/images/product22.gif" alt="Product 2" class="product">
+                  </a>
+                  <a href="product3.html" class="product-link">
+                      <img src="../src/images/product33.gif" alt="Product 3" class="product">
+                  </a>
+                  <a href="product4.html" class="product-link">
+                      <img src="../src/images/product44.gif" alt="Product 4" class="product">
+                  </a>
+              </div>
+          </div>
+          <button class="carousel-button right"><img src="../src/images/buttonright.png" alt="Right"></button>
+      </div>
+    </section>
+    <section id="section03">
+        <h2 class="section-title">이벤트</h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="../src/images/card1.png" alt="Card 1"></div>
+                <div class="slide active"><img src="../src/images/card2.png" alt="Card 2"></div>
+                <div class="slide"><img src="../src/images/card3.png" alt="Card 3"></div>
+                <div class="slide"><img src="../src/images/card4.png" alt="Card 4"></div>
+                <div class="slide"><img src="../src/images/card5.png" alt="Card 5"></div>
+                <div class="slide"><img src="../src/images/card6.png" alt="Card 6"></div> 
+            </div>
+        </div>
+        <div class="pagination">
+            <div class="progress-bar">
+                <div class="progress-segment" id="segment1"></div>
+                <div class="progress-segment" id="segment2"></div>
+                <div class="progress-segment" id="segment3"></div>
+                <div class="progress-segment" id="segment4"></div>
+                <div class="progress-segment" id="segment5"></div>
+                <div class="progress-segment" id="segment6"></div>
+            </div>
+            <span class="counter">1 / 6</span>
+            <div class="controls">
+                <button id="prev">〈</button>
+                <button id="next">〉</button>
+                <button id="pause">❙❙</button>
+            </div>
+        </div>
+    </section>
+    <section id="section04">
+        <h2 class="section-title">유용한 정보</h2>
+        <div class="informations">
+            <!-- 카드 1 -->
+            <div class="card">
+                <div class="image-container">
+                    <img src="../src/images/image1.png" alt="Static Image 1" class="static">
+                    <img src="../src/images/image1.gif" alt="Animated Image 1" class="animated">
+                </div>
+                <h3>쏠쏠한 카드 혜택</h3>
+                <p>다양한 카드 혜택을 확인해 보세요!</p>
+            </div>
+            
+            <!-- 카드 2 -->
+            <div class="card">
+                <div class="image-container">
+                    <img src="../src/images/image2.png" alt="Static Image 2" class="static">
+                    <img src="../src/images/image2.gif" alt="Animated Image 2" class="animated">
+                </div>
+                <h3>항공안심플랜</h3>
+                <p>항공 여행 걱정 없이 모두 누리세요!</p>
+            </div>
+            
+            <!-- 카드 3 -->
+            <div class="card">
+                <div class="image-container">
+                    <img src="../src/images/image3.png" alt="Static Image 3" class="static">
+                    <img src="../src/images/image3.gif" alt="Animated Image 3" class="animated">
+                </div>
+                <h3>면세/환전/렌트/쇼핑</h3>
+                <p>여행 준비 마무리는 여기에서!</p>
+            </div>
+        </div>
+    <footer class="footer" id="section05">
+      <div class="footer-title">고객센터</div>
+      <div class="footer-bottom">
+        <div class="footer-text1">
+          (주) 오름투어<br />주소 서울 강남구 역삼로 156 태광빌딩 2층
+        </div>
+        <div class="footer-text2">
+          고객센터<br />
+          투어 1588-0000 | 티켓 1522-0000<br />
+          팩스 02-000-0000 | 이메일 helpdesk@ormtour.com
+        </div>
+        <div class="footer-logo"></div>
+      </div>
+    </footer>
+    <script src="../src/main-page.js"></script>
+    <script src="../src/section02.js"></script>
+    <script src="../src/section03.js"></script>
+  </body>
+</html>
