@@ -119,7 +119,7 @@ video {
   transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 */
   /* main 부분에 공통적으로 해줄 내용 --- */
   width: 100%;
-  height: 980px;
+  height: auto;
   background-color: #ffffff;
   align-items: center;
   justify-content: center;
@@ -133,9 +133,10 @@ video {
 /* main 부분에 공통적으로 해줄 내용 --- */
 
 .banner-text {
-  font-size: 35px;
+  font-size: 2.25rem;
+  /* font-size: 3vw; */
   text-align: center;
-  margin-top: 200px;
+  margin-top: 12.5rem;
   margin-bottom: 40px;
   display: flex;
   justify-content: center;
@@ -161,33 +162,42 @@ video {
 
 .banner-text span {
   display: inline-block;
-  transition: transform 0.3s, color 0.3s;
+  position: relative; /* position 추가 */
+  /* transition: transform 4s, color 0.1s; */
+  transition: transform 3s cubic-bezier(0.68, -0.55, 0.27, 1.55), color 0s; /* 글자의 움직임을 부드럽게 해주기 위해 cubic-bezier 사용 */
 }
 
 .banner-text span.hover-animation {
-  transform: translateY(-5px)
-  transition: transform 0.3s, color 0.3s; /* 전환 효과 */
+  transform: translateY(-20px) scale(1.5) !important;
+  color: #fff400;
+  /* transition: transform 0.3s, color 0.3s; */
 }
 
 /* 각 글자에 애니메이션 효과 ---- */
 
 .banner-img {
-  width: 1000px;
-  height: 600px;
+  /* width: 1000px;
+  height: 600px; */
+  width: 100%;
+  height: auto;
+  max-width: 1000px; /* 최대 너비를 1000px로 설정 */
 }
 
 /*----------------------footer 부분---------------------*/
 
 .footer {
   margin: 0px;
-  height: 200px;
-  padding: 100px 350px 100px 350px;
+  /* height: 200px;
+  padding: 100px 21.875rem 100px 21.875rem; */
+  height: auto; /* 높이를 auto로 설정하여 컨텐츠에 맞게 늘어나도록 함 */
+  padding: 100px 20% 200px 20%; /* 여백을 상대적인 크기 (5%)로 설정 */
   align-content: center;
   flex-direction: column;
   text-align: left;
   display: none;
   opacity: 0; /* 요소를 투명하게 만들어 보이지 않음 */
   transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 */
+  min-width: 550px;
 }
 
 .show-footer {
@@ -198,7 +208,7 @@ video {
 .footer-title {
   margin: 0px;
   flex-grow: 1;
-  font-size: 1.5625rem;
+  font-size: 1.75rem;
   padding-bottom: 50px;
 }
 
@@ -211,14 +221,16 @@ video {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  height: auto; /* 높이를 auto로 설정하여 내부 내용에 맞게 늘어나도록 함 */
 }
 
 .footer-text1,
 .footer-text2 {
   flex-grow: 1;
-  margin: 0px; 
-  height: 120;
+  margin: 0px;
+  height: auto;
   font-size: 0.9375rem;
+  align-content: center;
 }
 
 .footer-logo {
@@ -233,15 +245,91 @@ video {
   background-size: contain;
 }
 
-@media (max-width: 1050px) {
+/* @media (max-width: 940px) {
   .footer {
-    padding: 100px 150px 100px 150px;
-    /* width: 550px; */
+    max-width: 940px;
+    min-width: 365px;
+    padding: 100px 30% 100px 30%;
     margin: 0px;
     height: 200px;
-    display: flex;
     align-content: center;
     flex-direction: column;
     text-align: left;
+    display: none;
+    opacity: 0; /* 요소를 투명하게 만들어 보이지 않음
+    transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 
+  }
+
+  .show-footer {
+    display: flex;
+    opacity: 1;
+  }
+} */
+
+/* 미디어 쿼리 - 화면 크기별로 스타일 조정 */
+
+/* 화면 크기가 1024px 이하일 때 */
+@media (max-width: 1024px) {
+  .header-tab {
+    width: 90%; /* 헤더 크기 조정 */
+  }
+  .header-logo {
+    margin: 15px 50px 15px 70px;
+    width: 170px;
+    height: 60px;
+  }
+
+  .header-tab a {
+    font-size: 0.875rem;
+  }
+
+  .banner-text {
+    font-size: 1.875rem; /* 배너 글씨 크기 조정 */
+  }
+
+  .footer-title {
+    font-size: 1.125rem; /* 푸터 제목 글씨 크기 조정 */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* 세로로 배치 */
+    align-items: flex-start;
+  }
+
+  .footer-text1,
+  .footer-text2 {
+    font-size: 0.6875rem;
+  }
+
+  .footer-logo {
+    width: 170px;
+    height: 110px; /* 로고 크기 조정 */
+    margin-left: 0;
+  }
+}
+
+/* 화면 크기가 768px 이하일 때 */
+@media (max-width: 768px) {
+  .header-tab a {
+    font-size: 10px;
+  }
+  .header-logo {
+    margin: 15px 40px 15px 70px;
+    width: 140px;
+    height: 50px;
+  }
+  .banner-text {
+    font-size: 1.5rem; /* 배너 글씨 크기 조정 */
+    margin-top: 8rem;
+  }
+
+  .footer-title {
+    font-size: 1rem; /* 푸터 제목 글씨 크기 조정 */
+  }
+
+  .footer-logo {
+    width: 140px;
+    height: 100px; /* 로고 크기 조정 */
+    margin-left: 0;
   }
 }
