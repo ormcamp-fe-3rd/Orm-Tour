@@ -10,7 +10,11 @@
     display: flex;
     text-align: center;
   }
-
+  .check-tab{
+    transform: translateY(10px);
+    max-width: 15px;
+    max-height: 15px;
+  }
   .logo img {
     max-width: 100px;
   }
@@ -50,7 +54,7 @@
   }
 
   .box-intro .box-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .section02-box {
     transform: translateY(-70px);

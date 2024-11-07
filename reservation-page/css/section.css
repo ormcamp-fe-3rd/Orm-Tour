@@ -696,3 +696,250 @@ margin-right: 10px;
     height: auto;
     
 }
+/*page*/
+.reviewBox {
+    padding: 15px;
+}
+
+.reviewBox h2 {
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.gather {
+    flex: 1;
+}
+
+.keywordsBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    place-items: center;
+}
+
+.headKeywords {
+    width: 90%;
+    grid-column: span 1;
+    background-color: #ebd8f8;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.keywords {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-column: span 2;
+    place-items: center;
+}
+
+.Gradation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, rgb(221, 167, 235), rgb(236, 110, 199));
+    opacity: 0.5;
+}
+
+.keywordText {
+    width: 100%;
+    background-color: #f5f5f5;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.reviewViewport {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.reviewContainers {
+    flex: 1;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.keywords {
+    width: 100%;
+}
+
+.bigBox {
+    width: 96%;
+    display: flex;
+}
+
+.keywordCount {
+    width: 20%;
+    transform: translateY(25%);
+    margin-left: 5px;
+}
+
+.carouselButton {
+    background-color: #aaa;
+    opacity: 0.5;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+}
+
+.prevButton {
+    left: 0;
+}
+
+.nextButton {
+    right: 0;
+}
+
+.reviewContainer {
+    width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.reviewHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.ratingBox {
+    text-align: center;
+}
+
+.rating {
+    color: #5c2bb6;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.userInfo {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.userInfo span {
+    margin-right: 10px;
+}
+
+.reviewTitle {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reviewText {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.photos {
+    display: flex;
+    gap: 10px;
+}
+
+.photos img {
+    width: 33%;
+    height: 100px;
+    object-fit: fill;
+    border-radius: 4px;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+
+    .review {
+        display: block;
+        text-align: center;
+    }
+
+    .reviewViewport {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .review {
+        display: block;
+        text-align: center;
+    }
+
+    .review img:first-child {
+        width: 100%;
+    }
+
+    .photos {
+        display: block;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+
+    .keywordsBox {
+        display: block;
+    }
+
+    .keywords {
+        display: block;
+    }
+
+    .headKeywords {
+        display: block;
+    }
+
+    .keywordText {
+        margin-top: 10px;
+    }
+
+    .reviewViewport {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
