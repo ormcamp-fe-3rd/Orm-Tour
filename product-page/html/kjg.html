@@ -90,43 +90,143 @@
         <h2>고객 리뷰</h2>
         <hr>
         <div class="review">
-            <img src="/Orm-Tour/product-page/src/리뷰.jpg" alt="리뷰이미지" width="60%">
-            <div class="reviewContainer">
-                <div class="reviewHeader">
-                    <div class="rating">★ 5</div>
-                    <div class="userInfo">
-                        <span>•</span>
-                        <span>가족여행으로 좋아요</span>
-                        <span>•</span>
-                        <span>40대</span>
-                        <span>•</span>
-                        <span>2024.10.05</span>
+            <div class="gather">
+                <div class="ratingBox">
+                    <span class="rating"></span>
+                    <span class="reviewCount"></span>
+                </div>
+                <div class="keywordsBox">
+                    <span class="headKeywords">"40대" 고객이 많이 구매한 상품입니다.</span>
+                    <span class="headKeywords">"가족여행"으로 좋아요</span>
+                    <div class="keywords"></div>
+                </div>
+            </div>
+
+            <div class="reviewViewport">
+
+                <button class="carouselButton prevButton">&lt;</button>
+                <button class="carouselButton nextButton">&gt;</button>
+                <div class="reviewContainers">
+                    <div class="reviewContainer">
+                        <div class="reviewHeader">
+                            <div class="rating">5</div>
+                            <div class="userInfo">
+                                <span>•</span>
+                                <span>가족여행으로 좋아요</span>
+                                <span>•</span>
+                                <span>40대</span>
+                                <span>•</span>
+                                <span>2024.10.05</span>
+                            </div>
+                        </div>
+
+                        <div class="reviewTitle">
+                            [단풍 여행] [퀘벡 출발] 캐나다 동부 9일 #퀘벡 2박 #니아가라 고층 폭포뷰 2박 #몽트랑블랑 숙박 #립스테이크 #로렌시안 트리탑 전망대
+                        </div>
+
+                        <div class="reviewText">
+                            14시간 비행 첫날 여행다녀온 것처럼 지친 피로를 어찌나 할 정도로 담날 몽트랑블랑 도착 후 쏙~ 사라진 피로 리조트가 너무 아기자기하고 예뻤어요 셋째날 퀘벡...
+                            밤에
+                            워해서요
+                            날씨도 좋아서
+                            일정도 보고 공유할 공간이 있었던 장소 도장깨기하고 그것만으로도 너무 좋았는데 셋째날 글쎄!!! 말로 표현할 수 없을 정도의 니아가라라면... 니아가라 하나만으로도
+                            14시간을
+                            만했어요 너무
+                            너무 멋졌어요 꼭 꼭 물안입니다 이코스 추천합니다!!
+                        </div>
+
+                        <div class="tags">
+                            <div class="tag">호텔이 관광지와 가까워요</div>
+                            <div class="tag">가이드가 전문적이예요</div>
+                            <div class="tag">호텔에서 쉬기 좋아요</div>
+                            <div class="tag">일정이 여유로워요</div>
+                        </div>
+
+                        <div class="photos">
+                            <img src="/Orm-Tour/product-page/src/2.jpg" alt="사진 1">
+                            <img src="/Orm-Tour/product-page/src/3.jpg" alt="사진 2">
+                            <img src="/Orm-Tour/product-page/src/4.jpg" alt="사진 3">
+                        </div>
                     </div>
-                </div>
+                    <div class="reviewContainer">
+                        <div class="reviewHeader">
+                            <div class="rating">4</div>
+                            <div class="userInfo">
+                                <span>•</span>
+                                <span>가족여행으로 좋아요</span>
+                                <span>•</span>
+                                <span>40대</span>
+                                <span>•</span>
+                                <span>2024.10.06</span>
+                            </div>
+                        </div>
 
-                <div class="reviewTitle">
-                    [단풍 여행] [퀘벡 출발] 캐나다 동부 9일 #퀘벡 2박 #니아가라 고층 폭포뷰 2박 #몽트랑블랑 숙박 #립스테이크 #로렌시안 트리탑 전망대
-                </div>
+                        <div class="reviewTitle">
+                            [단풍 여행] [퀘벡 출발] 캐나다 동부 9일 #퀘벡 2박 #니아가라 고층 폭포뷰 2박 #몽트랑블랑 숙박 #립스테이크 #로렌시안 트리탑 전망대
+                        </div>
 
-                <div class="reviewText">
-                    14시간 비행 첫날 여행다녀온 것처럼 지친 피로를 어찌나 할 정도로 담날 몽트랑블랑 도착 후 쏙~ 사라진 피로 리조트가 너무 아기자기하고 예뻤어요 셋째날 퀘벡... 밤에 워해서요
-                    날씨도 좋아서
-                    일정도 보고 공유할 공간이 있었던 장소 도장깨기하고 그것만으로도 너무 좋았는데 셋째날 글쎄!!! 말로 표현할 수 없을 정도의 니아가라라면... 니아가라 하나만으로도 14시간을
-                    만했어요 너무
-                    너무 멋졌어요 꼭 꼭 물안입니다 이코스 추천합니다!!
-                </div>
+                        <div class="reviewText">
+                            여행 내내 너무 즐거웠어요! 첫날 10시간 넘는 비행이라 힘들 줄 알았는데, 둘째 날부터 모든 피로가 다 사라지는 기분이었어요. 특히 몽트랑블랑에 도착했을 때, 자연
+                            풍경이 정말 아름답고 리조트도 아늑해서 힐링하기
+                            딱 좋았습니다.
 
-                <div class="tags">
-                    <div class="tag">호텔이 관광지와 가까워요</div>
-                    <div class="tag">일정이 여유로워요</div>
-                    <div class="tag">가격만큼 가치 있어요</div>
-                    <div class="tag">가격이 합리적이예요</div>
-                </div>
+                            셋째 날 퀘벡에서 야경을 보는데, 말로 표현하기 힘들 만큼 황홀했어요. 날씨도 너무 좋았고, 일정이 잘 짜여 있어서 여행을 온전히 즐길 수 있었어요. 그리고 니아가라
+                            폭포를 직접 보니까 14시간 비행이 전혀 아깝지
+                            않더라고요. 정말 꼭 추천하고 싶은 코스입니다!
+                        </div>
 
-                <div class="photos">
-                    <img src="/Orm-Tour/product-page/src/2.jpg" alt="사진 1">
-                    <img src="/Orm-Tour/product-page/src/3.jpg" alt="사진 2">
-                    <img src="/Orm-Tour/product-page/src/4.jpg" alt="사진 3">
+                        <div class="tags">
+                            <div class="tag">호텔이 관광지와 가까워요</div>
+                            <div class="tag">가이드가 재밌어요</div>
+                            <div class="tag">가격만큼 가치 있어요</div>
+                            <div class="tag">식당 뷰가 좋아요</div>
+                        </div>
+
+                        <div class="photos">
+                            <img src="/Orm-Tour/product-page/src/5.jpg" alt="사진 1">
+                            <img src="/Orm-Tour/product-page/src/6.jpg" alt="사진 2">
+                            <img src="/Orm-Tour/product-page/src/7.jpg" alt="사진 3">
+                        </div>
+                    </div>
+                    <div class="reviewContainer">
+                        <div class="reviewHeader">
+                            <div class="rating">5</div>
+                            <div class="userInfo">
+                                <span>•</span>
+                                <span>가족여행으로 좋아요</span>
+                                <span>•</span>
+                                <span>40대</span>
+                                <span>•</span>
+                                <span>2024.10.08</span>
+                            </div>
+                        </div>
+
+                        <div class="reviewTitle">
+                            [단풍 여행] [퀘벡 출발] 캐나다 동부 9일 #퀘벡 2박 #니아가라 고층 폭포뷰 2박 #몽트랑블랑 숙박 #립스테이크 #로렌시안 트리탑 전망대
+                        </div>
+
+                        <div class="reviewText">
+                            캐나다 동부 9일 여행은 정말 멋졌어요! 퀘벡에서의 2박은 유럽 같은 분위기를 느낄 수 있었고, 니아가라 폭포뷰 호텔에서는 고층에서 폭포를 바로 내려다볼 수 있어
+                            감동적이었어요.
+
+                            몽트랑블랑에서는 단풍이 물든 산과 리조트에서 힐링 시간을 보냈고, 로렌시안 트리탑 전망대에서는 아름다운 풍경을 만끽했어요. 립스테이크도 정말 맛있어서 기억에 남네요.
+
+                            자연과 도시가 완벽하게 어우러진 여정이라 꼭 추천하고 싶어요!
+                        </div>
+
+                        <div class="tags">
+                            <div class="tag">호텔이 관광지와 가까워요</div>
+                            <div class="tag">일정이 여유로워요</div>
+                            <div class="tag">가격만큼 가치 있어요</div>
+                            <div class="tag">가격이 합리적이예요</div>
+                        </div>
+
+                        <div class="photos">
+                            <img src="/Orm-Tour/product-page/src/8.jpg" alt="사진 1">
+                            <img src="/Orm-Tour/product-page/src/9.jpg" alt="사진 2">
+                            <img src="/Orm-Tour/product-page/src/10.jpg" alt="사진 3">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

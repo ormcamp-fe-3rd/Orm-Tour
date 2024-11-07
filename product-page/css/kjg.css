@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: 'Bitgoeul_Bold', sans-serif;
+    font-family: 'Bitgoeul_Medium', sans-serif;
 }
 
 @font-face {
@@ -16,6 +16,20 @@ body {
 @font-face {
     font-family: 'Bitgoeul_Bold';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitgoeul_Medium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitgoeul_Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -104,6 +118,10 @@ span.modalCloseBtn {
 }
 
 /*리뷰*/
+.reviewBox {
+    padding: 15px;
+}
+
 .reviewBox h2 {
     margin-bottom: 20px;
     text-indent: 20px;
@@ -111,16 +129,119 @@ span.modalCloseBtn {
 
 .review {
     display: flex;
-    padding-right: 20px;
+    flex-direction: row;
+    padding: 20px;
     margin-bottom: 50px;
 }
 
-.reviewContainer {
+.gather {
+    flex: 1;
+}
+
+.keywordsBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    place-items: center;
+}
+
+.headKeywords {
+    width: 90%;
+    grid-column: span 1;
+    background-color: #ebd8f8;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.keywords {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    grid-column: span 2;
+    place-items: center;
+}
+
+.Gradation {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, rgb(221, 167, 235), rgb(236, 110, 199));
+    opacity: 0.5;
+}
+
+.keywordText {
+    width: 100%;
+    background-color: #f5f5f5;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.reviewViewport {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.reviewContainers {
+    flex: 1;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.keywords {
+    width: 100%;
+}
+
+.bigBox {
+    width: 96%;
+    display: flex;
+}
+
+.keywordCount {
+    width: 20%;
+    transform: translateY(25%);
+    margin-left: 5px;
+}
+
+.carouselButton {
+    background-color: #aaa;
+    opacity: 0.5;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+}
+
+.prevButton {
+    left: 0;
+}
+
+.nextButton {
+    right: 0;
+}
+
+.reviewContainer {
+    width: 500px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: auto;
+    flex: 0 0 100%;
+    box-sizing: border-box;
 }
 
 .reviewHeader {
@@ -129,9 +250,13 @@ span.modalCloseBtn {
     margin-bottom: 15px;
 }
 
+.ratingBox {
+    text-align: center;
+}
+
 .rating {
     color: #5c2bb6;
-    font-size: 1.2em;
+    font-size: 20px;
     margin-right: 10px;
 }
 
@@ -190,6 +315,11 @@ span.modalCloseBtn {
         display: block;
         text-align: center;
     }
+
+    .reviewViewport {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -211,5 +341,26 @@ span.modalCloseBtn {
         height: auto;
         border-radius: 4px;
         margin-bottom: 5px;
+    }
+
+    .keywordsBox {
+        display: block;
+    }
+
+    .keywords {
+        display: block;
+    }
+
+    .headKeywords {
+        display: block;
+    }
+
+    .keywordText {
+        margin-top: 10px;
+    }
+
+    .reviewViewport {
+        width: 100%;
+        margin-top: 10px;
     }
 }
