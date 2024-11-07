@@ -1,0 +1,241 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    max-width: 1440px;
+}
+
+section {
+    width: 100%;
+    padding: 100px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitgoeul_Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* search form */
+#search-form {
+    position: relative;
+    max-width: 1024px;
+    padding-bottom: 100px;
+}
+
+.find-title, .result-title {
+    font-size: 1.5rem;
+    height: 50px;
+    border-bottom: 1px solid;
+    margin-bottom: 38px;
+}
+
+.find-wrap {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0;
+}
+
+.find {
+    display: flex;
+    align-items: center;
+}
+
+.find .label {
+    width: 120px;
+    font-size: 1.2rem;
+}
+
+.find input[type="text"] {
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#search-form button {
+    width: 150px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #EEE84C;
+    border: 0;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 24px;
+}
+
+/* result */
+.result {
+    max-width: 1024px;
+    padding-bottom: 35px;
+}
+
+.result-wrap {
+    width: 100%;
+    line-height: 50px;
+    position: relative;
+}
+
+.result-label p {
+    font-size: 1.2rem;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+#result {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+
+#result p {
+    font-size: 1.2rem;
+    line-height: 51px;
+    color: gray;
+}
+
+/* 예약 취소 */
+.cancel {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 15px;
+}
+
+.cancel button {
+    width: 150px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #EEE84C;
+    border: 0;
+    border-radius: 10px;
+    margin: 0;
+}
+
+#cancel-button:disabled {
+    background-color: #ccc;
+}
+
+#modal {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid transparent;
+    box-shadow: 0 0 50px #ccc;
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px 5px;
+    box-sizing: border-box;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 200%;
+}
+
+#confirm-cancel {
+    margin: 0 auto;
+}
+
+/* footer */
+.footer {
+    margin: 0px;
+    height: 200px;
+    padding: 100px 350px 100px 350px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.footer-title {
+    margin: 0px;
+    flex-grow: 1;
+    font-size: 1.5625rem;
+    padding-bottom: 50px;
+}
+
+.footer-bottom {
+    flex-grow: 1;
+    margin: 0px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-text1,
+.footer-text2 {
+    flex-grow: 1;
+    margin: 0px;
+    width: 380px;
+    height: 120;
+    font-size: 0.9375rem;
+}
+
+.logo {
+    margin: 0px;
+    margin-left: 30px;
+    width: 150px;
+    height: 100px;
+    background-color: transparent;
+    background-image: url("../../main-page/src/images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 1050px) {
+    .footer {
+        padding: 100px 150px 100px 150px;
+        width: 550px;
+        margin: 0px;
+        height: 200px;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        text-align: left;
+    }
+}
