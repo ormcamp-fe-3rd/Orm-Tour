@@ -35,6 +35,49 @@ section {
     font-style: normal;
 }
 
+/* header */
+.header {
+    width: 100%;
+    max-width: 1440px;
+    height: 149px;
+    display: flex;
+    justify-content:space-between;
+    padding: 30px 100px;
+    box-sizing: border-box;
+}
+
+.header .logo {
+    margin: 0px;
+    width: 190px;
+    height: 74px;
+    background-color: transparent;
+    background-image: url("../../main-page/src/images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header-tab {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.header-tab li {
+    list-style: none;
+}
+
+.header-tab a {
+    color: inherit;
+    text-decoration: inherit;
+    width: 94px;
+    height: 33px;
+    background-color: #F2EC62;
+    font-size: 15px;
+}
+
 /* search form */
 #search-form {
     position: relative;
@@ -118,6 +161,9 @@ section {
     font-size: 1.2rem;
     line-height: 51px;
     color: gray;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /* 예약 취소 */
