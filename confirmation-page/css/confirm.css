@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Bitgoeul_Light', sans-serif;
     max-width: 1440px;
 }
 
@@ -29,6 +29,20 @@ section {
 }
 
 @font-face {
+    font-family: 'Bitgoeul_Medium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitgoeul_Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Nanum Gothic';
     src: url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
     font-weight: normal;
@@ -42,7 +56,8 @@ section {
     height: 149px;
     display: flex;
     justify-content:space-between;
-    padding: 30px 100px;
+    align-items: center;
+    padding: 30px 0;
     box-sizing: border-box;
 }
 
@@ -225,9 +240,11 @@ section {
 
 /* footer */
 .footer {
-    margin: 0px;
+    width: 100%;
+    max-width: 1440px;
     height: 200px;
-    padding: 100px 350px 100px 350px;
+    padding: 30px 0;
+    margin: 0px;
     display: flex;
     align-content: center;
     flex-direction: column;
