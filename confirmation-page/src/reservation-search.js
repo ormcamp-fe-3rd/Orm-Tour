@@ -11,13 +11,13 @@ const resList = [
     },
     {
         orderID: "F1102",
-        phoneNumber: "010-4567-4567",
-        name: "이민호",
-        date: "2024-11-02",
-        product: "발리 5박 6일 휴양 여행",
+        phoneNumber: "010-5555-6666",
+        name: "김오름",
+        date: "2024-11-11",
+        product: "[퀘백출발] 캐나다 단풍 여행 3박 5일",
         guests: "성인 1명",
-        totalAmount: "1,800,000",
-        status: "예약완료"
+        totalAmount: "상담 완료 후 확정",
+        status: "예약 진행 중"
     }
 ];
 
@@ -28,9 +28,6 @@ document.getElementById('search-form').addEventListener('submit',
         const orderID = document.getElementById('order-number').value;
         const phoneNumber = document.getElementById('phone-number').value;
         const result = document.getElementById('result');
-
-        console.log(orderID)
-        console.log(phoneNumber)
         
         const reservation = resList.find(a => 
             a.orderID === orderID && a.phoneNumber === phoneNumber);
@@ -43,7 +40,7 @@ document.getElementById('search-form').addEventListener('submit',
             <p>${reservation.phoneNumber}</p>
             <p>${reservation.product}</p>
             <p>${reservation.guests}</p>
-            <p>${reservation.totalAmount}원</p>
+            <p>${reservation.totalAmount}</p>
             <p id="status">${reservation.status}</p>
             `                       
         } else {
