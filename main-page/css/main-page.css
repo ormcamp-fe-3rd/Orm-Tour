@@ -133,7 +133,7 @@ video {
 /* main 부분에 공통적으로 해줄 내용 --- */
 
 .banner-text {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   /* font-size: 3vw; */
   text-align: center;
   margin-top: 12.5rem;
@@ -239,32 +239,11 @@ video {
   width: 150px;
   height: 100px;
   background-color: transparent;
-  background-image: url("../../main-page/src/images/logo.png");
+  background-image: url("../../main-page/src/images/ormlogo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-/* @media (max-width: 940px) {
-  .footer {
-    max-width: 940px;
-    min-width: 365px;
-    padding: 100px 30% 100px 30%;
-    margin: 0px;
-    height: 200px;
-    align-content: center;
-    flex-direction: column;
-    text-align: left;
-    display: none;
-    opacity: 0; /* 요소를 투명하게 만들어 보이지 않음
-    transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 
-  }
-
-  .show-footer {
-    display: flex;
-    opacity: 1;
-  }
-} */
 
 /* 미디어 쿼리 - 화면 크기별로 스타일 조정 */
 
