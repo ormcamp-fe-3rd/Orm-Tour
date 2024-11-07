@@ -3,6 +3,9 @@ const header = document.querySelector(".header");
 const banner = document.querySelector(".banner");
 const footer = document.querySelector(".footer");
 const bannerTexts = document.querySelectorAll(".banner-text span");
+const section02 = document.getElementById("section02");
+const section03 = document.getElementById("section03");
+const section04 = document.getElementById("section04");
 const fadeOutTime = 0.5; // 애니메이션 시작 시간 (초)
 
 let animationCompleted = false; // 초기 애니메이션 완료 여부를 추적하는 변수
@@ -15,6 +18,9 @@ video.addEventListener("timeupdate", () => {
     setTimeout(() => {
       banner.classList.add("show-banner"); // banner가 보여지게
       footer.classList.add("show-footer"); // footer가 보여지게
+      section02.classList.add("show-section02");
+      section03.classList.add("show-section03");
+      section04.classList.add("show-section04");
 
       // 초기 애니메이션을 순차적으로 실행
       bannerTexts.forEach((letter, index) => {
