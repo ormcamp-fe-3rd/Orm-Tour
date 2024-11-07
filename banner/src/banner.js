@@ -1,30 +1,49 @@
 const video = document.getElementById("backgroundVideo");
 const header = document.querySelector(".header");
 const banner = document.querySelector(".banner");
+const footer = document.querySelector(".footer");
+const bannerTexts = document.querySelectorAll(".banner-text span");
 const fadeOutTime = 0.5; // 애니메이션 시작 시간 (초)
 
+let animationCompleted = false; // 초기 애니메이션 완료 여부를 추적하는 변수
+
 video.addEventListener("timeupdate", () => {
-    // 비디오의 남은 시간이 fadeOutTime 이하일 때 애니메이션 시작
-    //비디오의 전체 길이(재생 시간)-비디오가 현재 재생된 시점
     if (video.duration - video.currentTime <= fadeOutTime) {
         video.classList.add("fade-out");
-        header.classList.add("show-header"); // header가 서서히 나타나도록 설정
+        header.classList.add("show-header"); // header가 보여지게
 
-        // header가 나타난 후 0.2초 후에 banner가 서서히 나타나도록 설정
         setTimeout(() => {
-            banner.classList.add("show-banner");
+            banner.classList.add("show-banner"); // banner가 보여지게
+            footer.classList.add("show-footer"); // footer가 보여지게
 
-            // 각 글자에 순차적으로 animation-delay 적용
-            const letters = document.querySelectorAll(".banner-text span");
-            letters.forEach((letter, index) => {
+            // 초기 애니메이션을 순차적으로 실행
+            bannerTexts.forEach((letter, index) => {
                 letter.style.animationDelay = `${index * 0.1}s`;
             });
-        }, 200); // 200ms 지연 후에 show-banner 클래스 추가
+
+            // 초기 애니메이션이 완료된 후 플래그를 true로 설정
+            setTimeout(() => {
+                animationCompleted = true;
+            }, bannerTexts.length * 100); // 마지막 글자의 애니메이션 시간까지 대기
+        }, 100);
     }
 });
 
-video.addEventListener("ended", () => {
-    // 비디오를 DOM에서 제거
-    video.remove();
+// 마우스 hover 애니메이션 추가
+bannerTexts.forEach((bannerText) => {
+    bannerText.addEventListener("mouseenter", () => {
+        if (animationCompleted) { // 초기 애니메이션이 끝났을 때만 hover 애니메이션 적용
+            bannerText.classList.add("hover-animation");
+        }
+    });
 
+    bannerText.addEventListener("mouseleave", () => {
+        if (animationCompleted) {
+            bannerText.classList.remove("hover-animation");
+        }
+    });
+});
+
+video.addEventListener("ended", () => {
+    video.remove();
 });

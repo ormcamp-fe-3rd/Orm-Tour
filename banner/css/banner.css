@@ -60,7 +60,6 @@ video {
 
 .header {
   top: 0px;
-  border: solid 1px;
   width: 100%;
   height: 100px;
   position: fixed;
@@ -83,7 +82,6 @@ video {
   height: 100px;
   width: 80%;
   text-align: center;
-  /* border: solid 1px; */
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -115,30 +113,34 @@ video {
 
 .banner {
   font-family: "InkLipquid";
+  /* --- main 부분에 공통적으로 해줄 내용*/
   display: none;
   opacity: 0; /* 요소를 투명하게 만들어 보이지 않음 */
+  transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 */
+  /* main 부분에 공통적으로 해줄 내용 --- */
   width: 100%;
-  height: 740px;
+  height: 980px;
   background-color: #ffffff;
   align-items: center;
   justify-content: center;
-  transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 */
 }
-
-/* show-banner 클래스가 추가되면 banner가 서서히 나타남 */
+/* --- main 부분에 공통적으로 해줄 내용*/
 .show-banner {
   display: flex;
+  flex-direction: column;
   opacity: 1; /* 완전히 불투명하게 설정 */
 }
+/* main 부분에 공통적으로 해줄 내용 --- */
 
 .banner-text {
   font-size: 35px;
   text-align: center;
-  margin: 190px;
+  margin-top: 200px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
 }
-/* 각 글자에 애니메이션 효과 */
+/* --- 각 글자에 애니메이션 효과 */
 .banner-text span {
   display: inline-block;
   opacity: 0;
@@ -154,5 +156,92 @@ video {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.banner-text span {
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.banner-text span.hover-animation {
+  transform: translateY(-5px)
+  transition: transform 0.3s, color 0.3s; /* 전환 효과 */
+}
+
+/* 각 글자에 애니메이션 효과 ---- */
+
+.banner-img {
+  width: 1000px;
+  height: 600px;
+}
+
+/*----------------------footer 부분---------------------*/
+
+.footer {
+  margin: 0px;
+  height: 200px;
+  padding: 100px 350px 100px 350px;
+  align-content: center;
+  flex-direction: column;
+  text-align: left;
+  display: none;
+  opacity: 0; /* 요소를 투명하게 만들어 보이지 않음 */
+  transition: opacity 4s ease; /* 4초 동안 서서히 나타나도록 설정 */
+}
+
+.show-footer {
+  display: flex;
+  opacity: 1; /* 완전히 불투명하게 설정 */
+}
+
+.footer-title {
+  margin: 0px;
+  flex-grow: 1;
+  font-size: 1.5625rem;
+  padding-bottom: 50px;
+}
+
+.footer-bottom {
+  flex-grow: 1;
+  margin: 0px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-text1,
+.footer-text2 {
+  flex-grow: 1;
+  margin: 0px; 
+  height: 120;
+  font-size: 0.9375rem;
+}
+
+.footer-logo {
+  margin: 0px;
+  margin-left: 30px;
+  width: 150px;
+  height: 100px;
+  background-color: transparent;
+  background-image: url("../../main-page/src/images/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 1050px) {
+  .footer {
+    padding: 100px 150px 100px 150px;
+    /* width: 550px; */
+    margin: 0px;
+    height: 200px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    text-align: left;
   }
 }
