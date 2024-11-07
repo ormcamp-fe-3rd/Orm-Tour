@@ -134,6 +134,25 @@
     font-size: 0.5rem;
     font-weight: 650;
   }
+  .footer-title{
+   
+    padding: 20px;
+    width: 80%;
+    
+}
+.footer-bottom{
+    font-size: 0.5rem;
+    padding: 10px;
+    display: flex;
+   
+    height: 150px;
+    
+}
+.footer-logo img{
+    border: solid 1px;
+    width: 70%;
+}
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

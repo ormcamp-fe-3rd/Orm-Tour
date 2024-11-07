@@ -648,7 +648,7 @@ margin-right: 10px;
     height: 40px;
     transform: translateY(20px);
     padding: 5px;
-    margin-left: 10px;
+   
     border-radius: 10px;
     background-color: white;
     text-align: center;
@@ -680,4 +680,22 @@ margin-right: 10px;
 .bomb-btn i:hover{
       transition: 0.3s;
     color: blue;
+}
+
+.footer-title{
+   
+    padding: 20px;
+    width: 80%;
+    
+}
+.footer-bottom{
+    font-size: 0.8rem;
+    padding: 10px;
+    display: flex;
+   
+    height: auto;
+    
+}
+.footer-logo{
+  
 }
