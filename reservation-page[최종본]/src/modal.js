@@ -34,7 +34,7 @@ function validTest(phone) {
 }
 
 function validEmail(email) {
-    let emailRule = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    let emailRule = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 
     return emailRule.test(email);
 }
@@ -214,6 +214,9 @@ checkBox.addEventListener('click', function () {
     main.classList.remove('active');
     header.classList.remove('active');
     checkTab.classList.add('active');
+    emailValid.disabled = 'true';
+    phoneValid.disabled = 'true';
+    nameValid.disabled = 'true';
     reservationConfirm.disabled = 'true';
     reservationConfirm.innerText = '예약완료';
     reservationConfirm.style.backgroundcolor = 'gray';
@@ -265,6 +268,7 @@ btnnUpload.addEventListener('click', function () {
         chatImgDiv.classList.add('chat-img');
         const userSpan = document.createElement('span');
         userSpan.textContent = writer; // 사용자 이름을 여기에 추가
+        userSpan.classList.add('writer-board');
         const userImg = document.createElement('img');
         userImg.src = '../img/user.jpg';
         userImg.alt = 'user image';
@@ -277,6 +281,7 @@ btnnUpload.addEventListener('click', function () {
         const contentCommentDiv = document.createElement('div');
         contentCommentDiv.classList.add('content-comment'); // id 대신 class로 변경
         contentCommentDiv.textContent = comment; // 사용자가 입력한 댓글 내용 설정
+
 
         // 리뷰 내용 (여기에 기능 추가 가능)
         const contentReviewDiv = document.createElement('div');
@@ -388,4 +393,3 @@ for (let keyword in keywordCounts) {
 
     keywordsContainer.appendChild(keywordDisplay); // 키워드 요소를 추가
 }
-
