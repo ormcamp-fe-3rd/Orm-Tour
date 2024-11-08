@@ -287,7 +287,7 @@ btnnUpload.addEventListener('click', function() {
         userSpan.textContent = writer; // 사용자 이름을 여기에 추가
         userSpan.classList.add('writer-board');
         const userImg = document.createElement('img');
-        userImg.src = '../img/user.jpg'; 
+        userImg.src = '../src/img/user.jpg'; 
         userImg.alt = 'user image';
 
         // 채팅 박스
