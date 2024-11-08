@@ -1,4 +1,4 @@
-/* 모바일 화면 (기본 화면 크기 이하) */
+
 @media (max-width: 767px) {
   .header {
     max-height: 80px;
