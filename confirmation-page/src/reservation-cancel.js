@@ -13,7 +13,6 @@ confirmCancelBtn.addEventListener("click", ()=>{
     checkStatus();
 });
 
-// 예약상태에 따라 예약취소 버튼 상태 변경
 function checkStatus() {
     reservationStatus = document.getElementById("status");
 
