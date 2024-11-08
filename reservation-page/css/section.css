@@ -467,7 +467,12 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     background-color: #7f7f7f;
     font-size: 1.5rem;
 }
-
+.map-01{
+  padding-left: 100px;
+  padding-right: 100px;
+  
+  
+}
 
 /*지균님*/
 
@@ -495,6 +500,8 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 
 .section-1 {
     padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .section-1 h1 {
@@ -561,7 +568,10 @@ span.modalCloseBtn {
     top: 100px;
     cursor: pointer;
 }
-
+.section03{
+  padding-left: 100px;
+  padding-right: 100px;
+}
 .section03-title{
 padding: 10px;
 margin-left: 10px;
