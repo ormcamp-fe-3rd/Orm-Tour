@@ -5,18 +5,18 @@ const checkBox = document.querySelector('.checkBox');
 const checkTab = document.querySelector('.check-tab');
 
 
-let confirm = document.querySelector('.box2-submit button').addEventListener('click', function(){
-      modal.classList.remove('active');
-      modal.classList.add('active');
-      header.classList.add('active');
-      main.classList.add('active');
-      
+let confirm = document.querySelector('.box2-submit button').addEventListener('click', function () {
+    modal.classList.remove('active');
+    modal.classList.add('active');
+    header.classList.add('active');
+    main.classList.add('active');
+
 });
-    
-let cancle = document.querySelector('.modal-btn .cancle').addEventListener('click', function(){
-      modal.classList.remove('active');
-      header.classList.remove('active');
-      main.classList.remove('active');
+
+let cancle = document.querySelector('.modal-btn .cancle').addEventListener('click', function () {
+    modal.classList.remove('active');
+    header.classList.remove('active');
+    main.classList.remove('active');
 });
 
 
@@ -34,7 +34,7 @@ function validTest(phone) {
 }
 
 function validEmail(email) {
-    let emailRule =  /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    let emailRule = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 
     return emailRule.test(email);
 }
@@ -45,21 +45,21 @@ function validName(name) {
 }
 
 //input 이벤트 발생했을때 전화번호
-phoneValid.addEventListener('input', debounce(function() {
+phoneValid.addEventListener('input', debounce(function () {
     const phoneValue = phoneValid.value;
     validatePhoneNumber(phoneValue); // 메소드 불러오기 
-    updateButtonState(); 
+    updateButtonState();
 }));
 
 //
-emailValid.addEventListener('input', debounce(function() {
+emailValid.addEventListener('input', debounce(function () {
     const emailValue = emailValid.value;
     validateEmail(emailValue);
     updateButtonState();
 }))
 
 // input 발생했을때 이름 input 이벤트 발생했을때 
-nameValid.addEventListener('input', debounce(function() {
+nameValid.addEventListener('input', debounce(function () {
     const nameValue = nameValid.value;
     validateName(nameValue);
     updateButtonState(); // 해당 버튼 활성화 여부 
@@ -75,10 +75,10 @@ function validatePhoneNumber(phoneValue) {
 }
 //이메일 유효성검사 
 function validateEmail(emailValue) {
-    if(!validEmail(emailValue) || emailValue === "") {
-        emailValid.style.outline = "solid 2px red";
+    if (!validEmail(emailValue) || emailValue === "") {
+        emailValid.style.outline = "solide 2px red";
     }
-    else{
+    else {
         emailValid.style.outline = 'solid 2px yellow';
     }
 }
@@ -97,8 +97,8 @@ function updateButtonState() {
     const isPhoneValid = validTest(phoneValid.value);
     const isNameValid = validName(nameValid.value);
     const isEmailValid = validEmail(emailValid.value);
-    
-    
+
+
     if (isPhoneValid && isNameValid && isEmailValid) {
         btn.disabled = false;
     } else {
@@ -109,7 +109,7 @@ function updateButtonState() {
 // 로직
 function debounce(func, delay = 300) {
     let timeoutId;
-    return function(...args) {
+    return function (...args) {
         if (timeoutId) clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
             func.apply(this, args);
@@ -129,96 +129,96 @@ let i = 1;  // 초기값
 let j = 330000;  // 가격
 
 result.innerText = i;
-price.innerText = j * i; 
+price.innerText = j * i;
 
 price.style.color = 'blue';
-plus.addEventListener('click', function() {
+plus.addEventListener('click', function () {
     // 수량이 10보다 작을 때만 증가
     if (i < 10) {
-        i++;  
+        i++;
         result.innerText = i;  // 수량 화면에 업데이트
-     
-        price.innerText = j * i;  
+
+        price.innerText = j * i;
     }
-   
+
 });
 
 // 'minus' 버튼 클릭 시
-minus.addEventListener('click', function() {
+minus.addEventListener('click', function () {
     // 수량이 1보다 클 때만 감소
     if (i > 1) {
         i--;  // 수량 감소
-      
+
         result.innerText = i;  // 수량 화면에 업데이트
-        price.innerText = j * i; 
+        price.innerText = j * i;
     }
-    
+
 });
 
 
 // 모달창 화면에 보이게 제작하기 
-nameValid.addEventListener('change', function() {
-        try {
-            // 'name' 입력 필드의 값을 가져옴
-            const Form1 = document.getElementById('name').value;
+nameValid.addEventListener('change', function () {
+    try {
+        // 'name' 입력 필드의 값을 가져옴
+        const Form1 = document.getElementById('name').value;
 
-            const nameVal = document.getElementById('nameVal');
-            if (nameVal) {
-                nameVal.innerText = Form1;
-            } else {
-                throw new Error('해당 화면 노출 값 못 찾음');
-            }
-        } catch (error) {
-          
-            console.error('에러 메세지:', error.message);
+        const nameVal = document.getElementById('nameVal');
+        if (nameVal) {
+            nameVal.innerText = Form1;
+        } else {
+            throw new Error('해당 화면 노출 값 못 찾음');
         }
+    } catch (error) {
+
+        console.error('에러 메세지:', error.message);
+    }
 });
 
-phoneValid.addEventListener('change', function(){
-    try{
+phoneValid.addEventListener('change', function () {
+    try {
         //  값 가져옴
         const Form2 = document.getElementById('phone').value;
         const phoneVal = document.getElementById('phoneVal');
-        if(phoneVal){
+        if (phoneVal) {
             phoneVal.innerText = Form2;
         }
-        else{
+        else {
             throw new Error('해당 값 없음');
         }
     }
-    catch(error){
-        console.log('값 없어요' , error.message);
+    catch (error) {
+        console.log('값 없어요', error.message);
     }
 });
 
-emailValid.addEventListener('change', function(){
-    try{
+emailValid.addEventListener('change', function () {
+    try {
         const Form3 = document.getElementById('email').value;
         const emailVal = document.getElementById('emailVal');
-        if(emailVal){
+        if (emailVal) {
             emailVal.innerText = Form3
         }
-        else{
+        else {
             throw new Error('해당 값 없음')
         }
     }
-    catch(error){
+    catch (error) {
         console.log('값 없어요', error.message);
     }
 })
 
 //예약하기 버튼
 const reservationConfirm = document.querySelector('#submit');
-checkBox.addEventListener('click', function(){
+checkBox.addEventListener('click', function () {
     modal.classList.remove('active');
     main.classList.remove('active');
     header.classList.remove('active');
-    checkTab.classList.add('active');
+
     emailValid.disabled = 'true';
     phoneValid.disabled = 'true';
     nameValid.disabled = 'true';
     reservationConfirm.disabled = 'true';
-    reservationConfirm.innerText = '예약완료';  
+    reservationConfirm.innerText = '예약완료';
     reservationConfirm.style.backgroundcolor = 'gray';
 });
 
@@ -247,35 +247,15 @@ document.addEventListener("click", function (event) {
 
 // 더 좋은 방법 있으면 알려주세요 ... ㅠㅠㅠ 
 const btnUpload = document.querySelector('.upload');
-
 const chatContainer = document.querySelector('.comment-container'); // 채팅 댓글을 추가할 부모 요소
-
-
-
 const btnnUpload = document.querySelector('.upload');
 const chattContainer = document.querySelector('.comment-container'); // 부모 요소 (채팅 댓글을 추가할 부분)
 
-btnnUpload.addEventListener('click', function() {
+btnnUpload.addEventListener('click', function () {
     const chatChart = document.getElementById('chat'); // 사용자 입력을 받는 텍스트 영역
     const comment = chatChart.value.trim(); // 공백 제거 후 값 저장
-    const write = document.getElementById('writer'); 
+    const write = document.getElementById('writer');
     const writer = write.value.trim(); // 작성자명 저장
-
-
-
-
-    // <div class = "chat-comment">
-    //     <div class ="chat-img">
-    //       <span id = "writer-board">관리자</span>
-    //        <img src="../img/user.jpg" alt="">
-    //     </div>
-    //     <div class = "chat-content">
-    //       <div class = "content-comment">예시:환불 규정은 어떻게 돼요?</div>
-          
-    //       <div class ="content-rivew"> 
-    //      </div>
-    //     </div>
-
 
     // 댓글이 비어 있지 않으면 실행
     if (comment !== '' && writer !== '') {
@@ -290,7 +270,7 @@ btnnUpload.addEventListener('click', function() {
         userSpan.textContent = writer; // 사용자 이름을 여기에 추가
         userSpan.classList.add('writer-board');
         const userImg = document.createElement('img');
-        userImg.src = '../img/user.jpg'; 
+        userImg.src = '../img/user.jpg';
         userImg.alt = 'user image';
 
         // 채팅 박스
@@ -301,7 +281,7 @@ btnnUpload.addEventListener('click', function() {
         const contentCommentDiv = document.createElement('div');
         contentCommentDiv.classList.add('content-comment'); // id 대신 class로 변경
         contentCommentDiv.textContent = comment; // 사용자가 입력한 댓글 내용 설정
-    
+
 
         // 리뷰 내용 (여기에 기능 추가 가능)
         const contentReviewDiv = document.createElement('div');
@@ -327,6 +307,14 @@ btnnUpload.addEventListener('click', function() {
         write.value = '';
     }
 });
+
+// 채팅 포커스
+function focusArea() {
+    const focusText = document.querySelector('.upload');
+    const noChat = document.querySelector('#chat');
+
+    if (noChat.textContent.trim() === "") noChat.focus();
+};
 
 //지균님 
 let currentIndex = 0;
