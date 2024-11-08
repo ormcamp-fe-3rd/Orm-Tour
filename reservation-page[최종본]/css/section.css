@@ -64,8 +64,12 @@ header.active{
     width: 100%;
     align-items: center;
 }
-
-.guide button{
+.guide-button a{
+    text-decoration: none;
+    color: black;
+}
+.guide-button{
+    padding: 10px;
     background-color: rgb(255, 255, 0);
     border: none;
     border-radius: 10px;
@@ -367,6 +371,10 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     font-weight: 900;
     font-size: 1.5rem;
 }
+.box2-title input :disabled{
+    border: solid 2px;
+    color: gray;
+}
 /*예약하기*/
 .box2-form ul li input{
     width: 95%;
@@ -419,7 +427,9 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     font-weight: 900;
     height: 70px;
 }
-
+.writer-board{
+    font-size: .8rem;
+}
 
 .modal-1 ul, li{
     list-style: none;
@@ -645,7 +655,7 @@ margin-right: 10px;
     width: 80%;
 }
 .content-comment {
-    height: 40px;
+    height: auto;
     transform: translateY(20px);
     padding: 5px;
    

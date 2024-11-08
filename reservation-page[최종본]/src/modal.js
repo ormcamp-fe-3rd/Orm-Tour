@@ -34,7 +34,7 @@ function validTest(phone) {
 }
 
 function validEmail(email) {
-    let emailRule = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    let emailRule =  /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 
     return emailRule.test(email);
 }
@@ -76,7 +76,7 @@ function validatePhoneNumber(phoneValue) {
 //이메일 유효성검사 
 function validateEmail(emailValue) {
     if(!validEmail(emailValue) || emailValue === "") {
-        emailValid.style.outline = "solide 2px red";
+        emailValid.style.outline = "solid 2px red";
     }
     else{
         emailValid.style.outline = 'solid 2px yellow';
@@ -214,6 +214,9 @@ checkBox.addEventListener('click', function(){
     main.classList.remove('active');
     header.classList.remove('active');
     checkTab.classList.add('active');
+    emailValid.disabled = 'true';
+    phoneValid.disabled = 'true';
+    nameValid.disabled = 'true';
     reservationConfirm.disabled = 'true';
     reservationConfirm.innerText = '예약완료';  
     reservationConfirm.style.backgroundcolor = 'gray';
@@ -258,6 +261,22 @@ btnnUpload.addEventListener('click', function() {
     const write = document.getElementById('writer'); 
     const writer = write.value.trim(); // 작성자명 저장
 
+
+
+
+    // <div class = "chat-comment">
+    //     <div class ="chat-img">
+    //       <span id = "writer-board">관리자</span>
+    //        <img src="../img/user.jpg" alt="">
+    //     </div>
+    //     <div class = "chat-content">
+    //       <div class = "content-comment">예시:환불 규정은 어떻게 돼요?</div>
+          
+    //       <div class ="content-rivew"> 
+    //      </div>
+    //     </div>
+
+
     // 댓글이 비어 있지 않으면 실행
     if (comment !== '' && writer !== '') {
         // 새로운 채팅 댓글 생성
@@ -269,6 +288,7 @@ btnnUpload.addEventListener('click', function() {
         chatImgDiv.classList.add('chat-img');
         const userSpan = document.createElement('span');
         userSpan.textContent = writer; // 사용자 이름을 여기에 추가
+        userSpan.classList.add('writer-board');
         const userImg = document.createElement('img');
         userImg.src = '../img/user.jpg'; 
         userImg.alt = 'user image';
@@ -281,6 +301,7 @@ btnnUpload.addEventListener('click', function() {
         const contentCommentDiv = document.createElement('div');
         contentCommentDiv.classList.add('content-comment'); // id 대신 class로 변경
         contentCommentDiv.textContent = comment; // 사용자가 입력한 댓글 내용 설정
+    
 
         // 리뷰 내용 (여기에 기능 추가 가능)
         const contentReviewDiv = document.createElement('div');
