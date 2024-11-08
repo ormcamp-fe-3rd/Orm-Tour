@@ -113,8 +113,8 @@ header.active{
 
 /*section01*/
 .section01{
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
   
 }
 
@@ -262,8 +262,8 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 /*section02*/
 .section02{
  
-    padding-left: 30px;
-    padding-right: 30px;    
+    padding-left: 100px;
+    padding-right: 100px;    
     height: 300px;
   
 }
