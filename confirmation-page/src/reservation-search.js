@@ -52,8 +52,8 @@ document.getElementById('search-form').addEventListener('submit',
             `
         };
         
+        // 예약이 조회되면 예약취소 버튼 활성화
         document.getElementById("cancel-button").disabled = false;
-        checkStatus();  // 예약취소 버튼 상태 변경(reservation-cancel.js)
     }
 );
 
