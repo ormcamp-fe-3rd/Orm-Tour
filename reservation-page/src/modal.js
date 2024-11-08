@@ -213,7 +213,7 @@ checkBox.addEventListener('click', function(){
     modal.classList.remove('active');
     main.classList.remove('active');
     header.classList.remove('active');
-    checkTab.classList.add('active');
+   
     emailValid.disabled = 'true';
     phoneValid.disabled = 'true';
     nameValid.disabled = 'true';
@@ -261,9 +261,6 @@ btnnUpload.addEventListener('click', function() {
     const write = document.getElementById('writer'); 
     const writer = write.value.trim(); // 작성자명 저장
 
-
-
-
     // <div class = "chat-comment">
     //     <div class ="chat-img">
     //       <span id = "writer-board">관리자</span>
@@ -274,7 +271,7 @@ btnnUpload.addEventListener('click', function() {
           
     //       <div class ="content-rivew"> 
     //      </div>
-    //     </div>
+    //     </div> 이렇게 보시고 하시면 될거 같아요 
 
 
     // 댓글이 비어 있지 않으면 실행
@@ -290,7 +287,7 @@ btnnUpload.addEventListener('click', function() {
         userSpan.textContent = writer; // 사용자 이름을 여기에 추가
         userSpan.classList.add('writer-board');
         const userImg = document.createElement('img');
-        userImg.src = '../img/user.jpg'; 
+        userImg.src = '../src/img/user.jpg'; 
         userImg.alt = 'user image';
 
         // 채팅 박스

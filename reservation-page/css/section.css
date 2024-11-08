@@ -402,11 +402,10 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 
 /*modal*/
 .modal-1.active{
-    opacity: 1;
-    transition: 0.3s;
+    display: block;
 }
 .modal-1{
-    opacity: 0;
+    display: none;
     position: absolute;
     top:50%;
     background-color: #CFE9F4;
