@@ -57,14 +57,11 @@ document.getElementById('search-form').addEventListener('submit',
     }
 );
 
-// 예약자 성명 숫자 입력 방지
+// 예약자 성명 - 영어 대문자, 한글, 공백(영문 이름 고려) 입력 허용
 document.getElementById('order-name').addEventListener('input', function(event) {
-    setTimeout(() => {
-        event.target.value = event.target.value
-            .toUpperCase() // 영어 대문자로 변환
-            .replace(/[^A-Zㄱ-힣]/g, ''); // 영어 대문자와 한글 이외는 제거
-    }, 0);
-});
+    event.target.value = event.target.value.toUpperCase().replace(/[^A-Zㄱ-힣]/s, ''); 
+    }
+);
 
 // 전화번호 자동 하이픈
 document.getElementById('phone-number').addEventListener('input', function(event) {
