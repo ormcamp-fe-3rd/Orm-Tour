@@ -213,7 +213,7 @@ checkBox.addEventListener('click', function(){
     modal.classList.remove('active');
     main.classList.remove('active');
     header.classList.remove('active');
-    checkTab.classList.add('active');
+   
     emailValid.disabled = 'true';
     phoneValid.disabled = 'true';
     nameValid.disabled = 'true';
@@ -260,9 +260,6 @@ btnnUpload.addEventListener('click', function() {
     const comment = chatChart.value.trim(); // 공백 제거 후 값 저장
     const write = document.getElementById('writer'); 
     const writer = write.value.trim(); // 작성자명 저장
-
-
-
 
     // <div class = "chat-comment">
     //     <div class ="chat-img">
