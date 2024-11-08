@@ -56,6 +56,8 @@ section {
 header {
   top: 0px;
   width: 100%;
+  position: fixed;
+  z-index: 1;
   background-color: rgba(255, 255, 255, 0.9); /* 투명도 살짝 추가*/
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 추가 */
 }
