@@ -271,7 +271,7 @@ btnnUpload.addEventListener('click', function() {
           
     //       <div class ="content-rivew"> 
     //      </div>
-    //     </div>
+    //     </div> 이렇게 보시고 하시면 될거 같아요 
 
 
     // 댓글이 비어 있지 않으면 실행
