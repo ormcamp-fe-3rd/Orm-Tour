@@ -4,7 +4,6 @@
 
 body {
   font-family: "Bitgoeul_Light", sans-serif;
-  /* s */
 }
 
 section {
@@ -77,9 +76,11 @@ header {
   align-items: center;
   margin: 10%;
 }
+
 .header-tab li {
   list-style: none;
 }
+
 .header-tab a {
   text-decoration: none;
   font-size: 1.125rem;
@@ -104,8 +105,6 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-/*----------css 통일성을 위해 header 추가 ----------- */
 
 /* search form */
 #search-form {
@@ -163,6 +162,7 @@ header {
   right: 0;
   bottom: 24px;
 }
+
 #search-form button:active {
   background-color: #fff400;
 }
@@ -223,6 +223,7 @@ header {
 #cancel-button:active {
   background-color: #fff400;
 }
+
 #cancel-button:disabled {
   background-color: #ccc;
 }
