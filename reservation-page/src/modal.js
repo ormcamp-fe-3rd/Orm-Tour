@@ -120,20 +120,20 @@ function validateEmail(emailValue) {
 // 이름 유효성 검사 
 function validateName(nameValue) {
     if (!validName(nameValue) || nameValue === "") {
-        nameValid.style.outline = 'solid 2px red';
+        
     } else {
-        nameValid.style.outline = 'solid 2px yellow';
+        
     }
 }
 
 // 버튼 활성화 메소드
 function updateButtonState() {
     const isPhoneValid = validTest(phoneValid.value);
-    const isNameValid = validName(nameValid.value);
+   
     const isEmailValid = validEmail(emailValid.value);
 
 
-    if (isPhoneValid && isNameValid && isEmailValid) {
+    if (isPhoneValid && isEmailValid) {
         btn.disabled = false;
     } else {
         btn.disabled = true;
