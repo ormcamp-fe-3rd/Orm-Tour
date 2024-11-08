@@ -474,6 +474,15 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
   
 }
 
+.btn-page a{
+  text-decoration: none;
+  color: black;
+}
+.btn-page{
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--color-yellow);
+}
 /*지균님*/
 
 
