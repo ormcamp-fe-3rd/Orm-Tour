@@ -213,7 +213,7 @@ checkBox.addEventListener('click', function () {
     modal.classList.remove('active');
     main.classList.remove('active');
     header.classList.remove('active');
-    checkTab.classList.add('active');
+
     emailValid.disabled = 'true';
     phoneValid.disabled = 'true';
     nameValid.disabled = 'true';
