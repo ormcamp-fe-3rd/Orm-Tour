@@ -128,7 +128,7 @@ video {
   margin: 15px 60px 15px 70px;
   width: 200px;
   height: 70px;
-  align-items: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
