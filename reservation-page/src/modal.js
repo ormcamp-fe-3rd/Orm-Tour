@@ -29,8 +29,41 @@ const btn = document.querySelector('#submit'); // assuming the button has an id 
 const emailValid = document.querySelector('#email');
 // 정규식
 function validTest(phone) {
-    let phonrule = /^(01[016789]{1})[0-9]{3,4}[0-9]{4}$/;
+    let phonrule = /^(01[016789]{1})[-\s]?[0-9]{3,4}[-\s]?[0-9]{4}$/;
     return phonrule.test(phone);
+}
+function birthFormatter(num){
+	if(!num){
+		return "";
+	}
+	var formatNum = '';
+	num=num.replace(/\s/gi, "");
+	if(num.length == 8){  
+		formatNum = num.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
+	}else{
+		formatNum = num;
+	}
+	return formatNum;
+}
+    
+function phoneFormatter(num) {
+	var formatNum = '';
+	try{
+		if (num.length == 11) {
+			formatNum = num.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+		} else if (num.length == 8) {
+			formatNum = num.replace(/(\d{4})(\d{4})/, '$1-$2');
+		} else {
+			if (num.indexOf('02') == 0) {
+				formatNum = num.replace(/(\d{2})(\d{4})(\d{4})/, '$1-$2-$3');
+			} else {
+				formatNum = num.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+			}
+		}
+	} catch(e) {
+		formatNum = num;
+	}
+	return formatNum;
 }
 
 function validEmail(email) {
@@ -65,6 +98,7 @@ nameValid.addEventListener('input', debounce(function () {
     updateButtonState(); // 해당 버튼 활성화 여부 
 }));
 
+
 // 유효성 검사 
 function validatePhoneNumber(phoneValue) {
     if (!validTest(phoneValue) || phoneValue === "") {
@@ -76,7 +110,7 @@ function validatePhoneNumber(phoneValue) {
 //이메일 유효성검사 
 function validateEmail(emailValue) {
     if (!validEmail(emailValue) || emailValue === "") {
-        emailValid.style.outline = "solide 2px red";
+        emailValid.style.outline = "solid 2px red";
     }
     else {
         emailValid.style.outline = 'solid 2px yellow';
@@ -270,7 +304,7 @@ btnnUpload.addEventListener('click', function () {
         userSpan.textContent = writer; // 사용자 이름을 여기에 추가
         userSpan.classList.add('writer-board');
         const userImg = document.createElement('img');
-        userImg.src = '../img/user.jpg';
+        userImg.src = './reservation-page/src/img/user.jpg';
         userImg.alt = 'user image';
 
         // 채팅 박스
