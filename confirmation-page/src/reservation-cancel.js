@@ -1,6 +1,7 @@
 const modal = document.getElementById("modal");
 const cancelBtn = document.getElementById("cancel-button")
 const confirmCancelBtn = document.getElementById("confirm-cancel")
+const cancelCancelBtn = document.getElementById("cancel-cancel")
 let reservationStatus = document.getElementById("status");
 
 cancelBtn.addEventListener("click", ()=>{
@@ -13,7 +14,11 @@ confirmCancelBtn.addEventListener("click", ()=>{
     checkStatus();
 });
 
-// 예약상태에 따라 예약취소 버튼 상태 변경
+cancelCancelBtn.addEventListener("click", ()=>{
+    modal.style.display = "none";
+    checkStatus();
+});
+
 function checkStatus() {
     reservationStatus = document.getElementById("status");
 
