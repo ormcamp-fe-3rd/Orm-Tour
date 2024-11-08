@@ -20,14 +20,15 @@ lastSlides.forEach(slide => slides.insertBefore(slide.cloneNode(true), slideElem
 
 function updateCounter() {
     const currentPage = ((slideIndex - slidesToShow) % slideCount) + 1;
+    if(currentPage <= 0) {
+        return ;
+    }
     counter.textContent = `${currentPage} / ${slideCount}`;
 }
 
 function showNextSlide() {
-    if (!isPaused) {
-        slideIndex++;
-        updateSlidePosition();
-    }
+    slideIndex++;
+    updateSlidePosition();
 }
 
 function showPreviousSlide() {
@@ -70,7 +71,11 @@ function updateSlidePosition() {
 
     if(slideIndex === slideCount + 3) {
         document.querySelectorAll('.slide')[4].classList.add('active');
-    }
+    };
+
+    if(slideIndex === slideCount - 4) {
+        document.querySelectorAll('.slide')[9].classList.add('active');
+    };
 };
 
 // 카드 강조 첫 화면 조정
