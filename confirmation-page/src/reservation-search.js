@@ -23,52 +23,57 @@ const resList = [
     }
 ];
 
-document.getElementById('search-form').addEventListener('submit', 
-    function(event) {
-        event.preventDefault();  // form 제출 후 새로고침 방지
-        
-        const orderName = document.getElementById('order-name').value;
-        const phoneNumber = document.getElementById('phone-number').value;
-        const result = document.getElementById('result');
-        
-        const reservation = resList.find(a => 
-            a.name === orderName && a.phoneNumber === phoneNumber);
+function displayReservationDetails(event) {
+    event.preventDefault();  // form 제출 후 새로고침 방지
+    
+    const orderName = document.getElementById('order-name').value;
+    const phoneNumber = document.getElementById('phone-number').value;
+    const result = document.getElementById('result');
+    
+    const reservation = resList.find(a => 
+        a.name === orderName && a.phoneNumber === phoneNumber);
 
-        if (reservation) {
-            result.innerHTML = `
-            <p>${reservation.orderID}</p>
-            <p>${reservation.date}</p>
-            <p>${reservation.name}</p>
-            <p>${reservation.email}</p>
-            <p>${reservation.phoneNumber}</p>
-            <p>${reservation.product}</p>
-            <p>${reservation.guests}</p>
-            <p>${reservation.totalAmount}</p>
-            <p id="status">${reservation.status}</p>
-            `                       
-        } else {
-            result.innerHTML = `
-            <p>예약 내역을 찾을 수 없습니다.</p>
-            `
-        };
-        
-        // 예약이 조회되면 예약취소 버튼 활성화
-        if(reservation) {
-            document.getElementById("cancel-button").disabled = false;
-        } else {
-            document.getElementById("cancel-button").disabled = true;
-        };
-    }
-);
+    if (reservation) {
+        result.innerHTML = `
+        <p>${reservation.orderID}</p>
+        <p>${reservation.date}</p>
+        <p>${reservation.name}</p>
+        <p>${reservation.email}</p>
+        <p>${reservation.phoneNumber}</p>
+        <p>${reservation.product}</p>
+        <p>${reservation.guests}</p>
+        <p>${reservation.totalAmount}</p>
+        <p id="status">${reservation.status}</p>
+        `                       
+    } else {
+        result.innerHTML = `
+        <p>예약 내역을 찾을 수 없습니다.</p>
+        `
+    };
+    
+    // 예약이 조회되면 예약취소 버튼 활성화
+    if(reservation) {
+        document.getElementById("cancel-button").disabled = false;
+    } else {
+        document.getElementById("cancel-button").disabled = true;
+    };
+};
+
+document.getElementById('search-form').addEventListener('submit', displayReservationDetails);
+
 
 // 예약자 성명 - 영어 대문자, 한글, 공백(영문 이름 고려) 입력 허용
-document.getElementById('order-name').addEventListener('input', function(event) {
+function validateNameInput(event) {
     event.target.value = event.target.value.toUpperCase().replace(/[^A-Zㄱ-힣]/s, ''); 
-    }
-);
+};
+
+document.getElementById('order-name').addEventListener('input', validateNameInput);
+
 
 // 전화번호 자동 하이픈
-document.getElementById('phone-number').addEventListener('input', function(event) {
+function autoHyphenPhoneNumber(event) {
     const revNum = event.target.value.replace(/-/g, '').replace(/^(\d{2,3})(\d{3,4})(\d{4})$/g, "$1-$2-$3");
     event.target.value = revNum;
-})
+};
+
+document.getElementById('phone-number').addEventListener('input', autoHyphenPhoneNumber);
