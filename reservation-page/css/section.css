@@ -264,7 +264,7 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
  
     padding-left: 100px;
     padding-right: 100px;    
-    height: 300px;
+  
   
 }
 .section02-box{
@@ -468,8 +468,6 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     font-size: 1.5rem;
 }
 .map-01{
-  padding-left: 100px;
-  padding-right: 100px;
   
   
 }
@@ -508,9 +506,8 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 }
 
 .section-1 {
-    padding: 30px;
-    padding-left: 100px;
-    padding-right: 100px;
+   
+   
 }
 
 .section-1 h1 {
