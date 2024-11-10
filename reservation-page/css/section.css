@@ -1,493 +1,5 @@
-*{
-    margin:  0 auto;
-}
-:root{
-
-    --color-cancle: var(--color-gray);
-    --color-tab: var(--color-blue);
-    --color-button: var(--color-yellow);
-
-    /*colors*/
-    --color-blue: rgb(207, 233, 244);
-    --color-gray:rgb(127, 127, 127);
-    --color-yellow:rgb(255, 244, 0);
-}
-
-
-
-html {
-  scroll-behavior: smooth;
-}
-button:focus {
-  outline: 1px solid transparent;
-}
-h1,
-h2,
-h3,
-p,
-ul {
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-body{
-    font-family: 'Bitgoeul_Bold', sans-serif;
-}
-
-main.active{
-    filter: brightness(.5);
-    background-color: rgb(0, 0, 0, 0.7);
-}
-header.active{
-   filter: brightness(.5);
-   background-color: rgb(0,0,0, 0.7);
-}
-
-.header{
-   position: relative;
-    height: 100px;
-  
-
-}
-.header .guide{
-    
-    border-bottom: solid 1px gray;
-    background-color: white;
-    z-index: 100;
-    position: fixed;
-    padding: 10px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
-
-.guide button{
-    background-color: rgb(255, 255, 0);
-    border: none;
-    border-radius: 10px;
-    font-weight: 800;
-    font-size: 30px;
-}
-.line-tag{
-    position: relative;
-   
-}
-.line-tag .check-tab{
-   
-    position: absolute;
-    top:-15px;
-    text-align: center;
-    width: 20px;
-    border-radius: 20px;
-    background-color: orangered;
-    color: white;
-    height: 20px;
-    opacity: 0;
-    transition: 0.5s;
-}
-.check-tab.active{
-    opacity: 1;
-}
-/*section01*/
-
-
-.line-tag button{
-    background-color: var(--color-button);
-    color: black;
-    font-weight: 900;
-        padding: 5px;
-    border-radius: 10px;
-    border: none;
-    transition: 0.3s;
-    font-size: 1.5rem;
-
-    margin-right: 10px;
-}
-.line-tag button:hover{
-    background-color: var(--color-gray);
-}
-
-/*section01*/
-.section01{
-  padding-left: 100px;
-  padding-right: 100px;
-  
-}
-
-.box-inner{
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    align-items: center;
-
-}
-/*img 부분*/
-.box-img{
-    width: 65%;
-    height: 400px;
-    position: relative;
-    
-}
-.box-img div{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-    object-fit: cover;
-}
-.box-img div img{
-    width: 100%;
-    height: 100%;
-
-    border-radius: 10px;
- 
-}
-input[type = "radio"] {
-    display: none;
-}
-
-/*가상클래스*/
-input[id = "tab1"]:checked ~  .box-set .box-img div:nth-child(1){
-    opacity: 1;
-}
-input[id = "tab2"]:checked ~  .box-set .box-img div:nth-child(2){
-    opacity: 1;
-}
-
-input[id = "tab3"]:checked ~  .box-set .box-img div:nth-child(3){
-    opacity: 1;
-}
-
-
-input[id = "tab1"]:checked ~ .box-btn label[for = "tab1"] {
-    background-color: var(--color-blue);
-    color: #7f7f7f;
-}
-input[id = "tab2"]:checked ~ .box-btn label[for = "tab2"] {
-      background-color: var(--color-blue);
-    color: #7f7f7f;
-}
-input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
-      background-color: var(--color-blue);
-    color: #7f7f7f;
-}
-.box-set{
-    display: flex;
-}
-
-.box-btn{
-    
-    height: 30px;
-    width: 150px;
-    margin-top: 2px;
-    position: absolute;
-    text-align: center;
-    z-index: 2;
-}
-.box-btn label{
-    position: absolute;
-    border-radius: 10px;
-    z-index: 10;
-    cursor: pointer;
-    background-color: rgb(14, 14, 13);;
-    transition: 0.3s;
-    color: wheat;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.box-btn label:nth-child(1){
-    left: 10px;
-    width: 25px;
-    height: 25px;
-}
-.box-btn label:nth-child(2){
-    left: 40px;
-    width: 25px;
-    height: 25px;
-    
-}
-.box-btn label:nth-child(3){
-    left: 70px;
-    width: 25px;
-    height: 25px;
-}
-.box-intro{
-    display: inline-block;
-    text-align: center;
-    width: 50%;  
-    height: 100%;
-    
-}
-.box-intro .box-title{
-    font-size: 2.5rem;
-}
-
-.box-intro .box-show{
-    border-bottom: solid 1px;
-    border-top: solid 1px;
-    color: rgb(0, 0, 0, 0.6);
-   padding: 15px;
-    margin: 10px;
-}
-.box-share{
-   padding: 1px;
-   height: 70px;
-}
-.box-share i{
-    margin-right: 10px;
-    font-size: 2.5rem;
-    float: right;
-}
-.box-icon1{
-    
-    font-size: 1rem;
-}
-.box-icon1 table{
-    margin-top: 0;
-    font-size: 1rem;
-    width: 80%;
-
-}
-.box-icon1 th{
-    padding: 2px;
-}
-/*section02*/
-.section02{
- 
-    padding-left: 100px;
-    padding-right: 100px;    
-    height: 300px;
-  
-}
-.section02-box{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    
-}
-
-.box2-form button{
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: var(--color-button);
-    font-size: 1.2rem;
-    border-radius: 2px;
-    transition: 0.3s;
-    margin-right: 10px;
-}
-.box2-form button:hover{
-
-    background-color: var(--color-cancle);
-}
-.box2{
-    align-items: center;
-    justify-content: center;
-}
-.comment table{
-    align-items: center;
-    justify-content: center;
-}
-.comment th{
-    font-size: 1.5rem;
-}
-.comment td{
-    font-size: 1.5rem;
-}
-.box2{
-   
-    margin-left: 10px;
-    padding: 10px;
-    width: 60%;
-    height: 260px;
-    background-color: var(--color-tab);
-    border-radius: 10px;
-}
-.box-comment{
-    position: relative;
-    top:50px;
-    font-size:1.2rem;
-}
-.box-comment div{
-    margin-top: 10px;
-}
-.comment span{
-    margin-right: 10px;
-    font-weight: 900;
-}
-
-
-.box2-img img{
-    width: 100px;
-    scale: 1.1;
-    height: 100px;
-}
-.box2:nth-child(2) .comment{
-
-    font-size: 1.8rem;
-}
-.box2-comment1{
-    display: flex;
-    position: relative;
-    height: 100px;
-    top:60px;
-    font-size: 2rem;
-}
-.box2-comment1 .comment{
-    height: 70px;
-    
-}
-
-.check-box{
-    transform: translateX(30px);
-    display: flex;
-    margin-top: 100px;
-    font-size: 1.1rem;
-}
-/*box2- 세번째*/
-.box2-form{
-  
-    width: 35%;
-    height: 260px;
-    border-radius: 10px;
-    padding: 10px;
-    margin-left: 10px;
-    background-color: var(--color-tab);
-}
-.box2-form ul{
-    list-style: none;
-}
-.box2-form ul li{
-    font-weight: 900;
-    font-size: 1.1rem;
-    margin-top: 2px;
-}
-.box2-title{
-    font-weight: 900;
-    font-size: 1.5rem;
-}
-/*예약하기*/
-.box2-form ul li input{
-    width: 95%;
-    border-radius: 5px;
-    border: none;
-    padding: 3px;
-}
-.box2-submit{
-    text-align: center;
-}
-.box2-submit button{
-    margin-top: 10px;
-    width: 40%;
-    font-size: 1.1rem;
-    background: rgb(255, 255, 0);
-    border: none;
-    transition: 0.3s;
-    border-radius: 3px;
-    font-weight: 900;
-}
-.box2-submit button:hover{
-    background-color: rgb(31, 31, 30);
-    color: rgb(136, 133, 132);
-}
-
-/*modal*/
-.modal-1.active{
-    opacity: 1;
-    transition: 0.3s;
-}
-.modal-1{
-    opacity: 0;
-    position: absolute;
-    top:50%;
-    background-color: #CFE9F4;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    transition: 0.5s;
-    width: 350px;
-    border-radius: 20px;
-    height: 350px;
-}
-.modal-box{
-    background-color: #fff400;
-    border-radius: 10px 10px 0px 0px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 900;
-    height: 70px;
-}
-
-
-.modal-1 ul, li{
-    list-style: none;
-    font-size: 1rem;
-    font-weight: 900; 
-}
-.modal-list{
-    padding: 10px;
-}
-.modal-list li{
-    padding: 10px;
-}
-.modal-btn{
-
-    margin-top: 20px;
-    text-align: center;
-}
-.modal-btn button{
-    cursor: pointer;
-}
-.modal-btn .checkBox{
-    padding: 5px;
-    border-radius: 4px;
-    border: none;
-    font-weight: 800;
-
-    font-size: 1.5rem;
-    background-color: #fff400;
-    margin-left: 10px;
-}
-.modal-btn .cancle{
-    margin-left: 10px;
-    padding: 5px;
-    border-radius: 4px;
-    border: none;
-    width: 100px;
-    padding: 5px;
-    background-color: #7f7f7f;
-    font-size: 1.5rem;
-}
-.map-01{
-  padding-left: 100px;
-  padding-right: 100px;
-  
-  
-}
-
-.btn-page a{
-  text-decoration: none;
-  color: black;
-}
-.btn-page{
-  padding: 20px;
-  border-radius: 20px;
-  background-color: var(--color-yellow);
-}
-/*지균님*/
-
-
 @font-face {
-    font-family: 'Bitgeoul_Light';
+    font-family: 'InkLipquid';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -502,29 +14,590 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 
 @font-face {
     font-family: 'Bitgoeul_Medium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bitgoeul_Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nanum Gothic';
     src: url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
     font-weight: normal;
     font-style: normal;
 }
 
-.section-1 {
+* {
+    margin: 0 auto;
+}
+
+:root {
+
+    --color-cancle: var(--color-gray);
+    --color-tab: var(--color-blue);
+    --color-button: var(--color-yellow);
+
+    /*colors*/
+    --color-blue: rgb(207, 233, 244);
+    --color-gray: rgb(127, 127, 127);
+    --color-yellow: rgb(255, 244, 0);
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+button:focus {
+    outline: 1px solid transparent;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bitgoeul_Bold', sans-serif;
+}
+
+main.active {
+    filter: brightness(.5);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+header.active {
+    filter: brightness(.5);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.header {
+    position: relative;
+    height: 100px;
+
+
+}
+
+.header .guide {
+
+    border-bottom: solid 1px gray;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.guide button {
+    background-color: rgb(255, 255, 0);
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.line-tag {
+    position: relative;
+
+}
+
+.line-tag .check-tab {
+
+    position: absolute;
+    top: -15px;
+    text-align: center;
+    width: 20px;
+    border-radius: 20px;
+    background-color: orangered;
+    color: white;
+    height: 20px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.check-tab.active {
+    opacity: 1;
+}
+
+/*section01*/
+
+
+.line-tag button {
+    background-color: var(--color-button);
+    color: black;
+    font-weight: 900;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+    font-size: 1.5rem;
+
+    margin-right: 10px;
+}
+
+.line-tag button:hover {
+    background-color: var(--color-gray);
+}
+
+/*section01*/
+.section01 {
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+.box-inner {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    align-items: center;
+
+}
+
+/*img 부분*/
+.box-img {
+    width: 65%;
+    height: 400px;
+    position: relative;
+
+}
+
+.box-img div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.box-img div img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/*가상클래스*/
+input[id="tab1"]:checked~.box-set .box-img div:nth-child(1) {
+    opacity: 1;
+}
+
+input[id="tab2"]:checked~.box-set .box-img div:nth-child(2) {
+    opacity: 1;
+}
+
+input[id="tab3"]:checked~.box-set .box-img div:nth-child(3) {
+    opacity: 1;
+}
+
+
+input[id="tab1"]:checked~.box-btn label[for="tab1"] {
+    background-color: var(--color-blue);
+    color: #7f7f7f;
+}
+
+input[id="tab2"]:checked~.box-btn label[for="tab2"] {
+    background-color: var(--color-blue);
+    color: #7f7f7f;
+}
+
+input[id="tab3"]:checked~.box-btn label[for="tab3"] {
+    background-color: var(--color-blue);
+    color: #7f7f7f;
+}
+
+.box-set {
+    display: flex;
+}
+
+.box-btn {
+
+    height: 30px;
+    width: 150px;
+    margin-top: 2px;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+}
+
+.box-btn label {
+    position: absolute;
+    border-radius: 10px;
+    z-index: 10;
+    cursor: pointer;
+    background-color: rgb(14, 14, 13);
+    ;
+    transition: 0.3s;
+    color: wheat;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-btn label:nth-child(1) {
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.box-btn label:nth-child(2) {
+    left: 40px;
+    width: 25px;
+    height: 25px;
+
+}
+
+.box-btn label:nth-child(3) {
+    left: 70px;
+    width: 25px;
+    height: 25px;
+}
+
+.box-intro {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+
+}
+
+.box-intro .box-title {
+    font-size: 2.5rem;
+}
+
+.box-intro .box-show {
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+    color: rgb(0, 0, 0, 0.6);
+    padding: 15px;
+    margin: 10px;
+}
+
+.box-share {
+    padding: 1px;
+    height: 70px;
+}
+
+.box-share i {
+    margin-right: 10px;
+    font-size: 2.5rem;
+    float: right;
+}
+
+.box-icon1 {
+
+    font-size: 1rem;
+}
+
+.box-icon1 table {
+    margin-top: 0;
+    font-size: 1rem;
+    width: 80%;
+
+}
+
+.box-icon1 th {
+    padding: 2px;
+}
+
+/*section02*/
+.section02 {
+
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 300px;
+
+}
+
+.section02-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+}
+
+.box2-form button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: var(--color-button);
+    font-size: 1.2rem;
+    border-radius: 2px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.box2-form button:hover {
+
+    background-color: var(--color-cancle);
+}
+
+.box2 {
+    align-items: center;
+    justify-content: center;
+}
+
+.comment table {
+    align-items: center;
+    justify-content: center;
+}
+
+.comment th {
+    font-size: 1.5rem;
+}
+
+.comment td {
+    font-size: 1.5rem;
+}
+
+.box2 {
+
+    margin-left: 10px;
+    padding: 10px;
+    width: 60%;
+    height: 260px;
+    background-color: var(--color-tab);
+    border-radius: 10px;
+}
+
+.box-comment {
+    position: relative;
+    top: 50px;
+    font-size: 1.2rem;
+}
+
+.box-comment div {
+    margin-top: 10px;
+}
+
+.comment span {
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+
+.box2-img img {
+    width: 100px;
+    scale: 1.1;
+    height: 100px;
+}
+
+.box2:nth-child(2) .comment {
+
+    font-size: 1.8rem;
+}
+
+.box2-comment1 {
+    display: flex;
+    position: relative;
+    height: 100px;
+    top: 60px;
+    font-size: 2rem;
+}
+
+.box2-comment1 .comment {
+    height: 70px;
+
+}
+
+.check-box {
+    transform: translateX(30px);
+    display: flex;
+    margin-top: 100px;
+    font-size: 1.1rem;
+}
+
+/*box2- 세번째*/
+.box2-form {
+
+    width: 35%;
+    height: 260px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: var(--color-tab);
+}
+
+.box2-form ul {
+    list-style: none;
+}
+
+.box2-form ul li {
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.box2-title {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+/*예약하기*/
+.box2-form ul li input {
+    width: 95%;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+}
+
+.box2-submit {
+    text-align: center;
+}
+
+.box2-submit button {
+    margin-top: 10px;
+    width: 40%;
+    font-size: 1.1rem;
+    background: rgb(255, 255, 0);
+    border: none;
+    transition: 0.3s;
+    border-radius: 3px;
+    font-weight: 900;
+}
+
+.box2-submit button:hover {
+    background-color: rgb(31, 31, 30);
+    color: rgb(136, 133, 132);
+}
+
+/*modal*/
+.modal-1.active {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.modal-1 {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    background-color: #CFE9F4;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    width: 350px;
+    border-radius: 20px;
+    height: 350px;
+}
+
+.modal-box {
+    background-color: #fff400;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    height: 70px;
+}
+
+
+.modal-1 ul,
+li {
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.modal-list {
+    padding: 10px;
+}
+
+.modal-list li {
+    padding: 10px;
+}
+
+.modal-btn {
+
+    margin-top: 20px;
+    text-align: center;
+}
+
+.modal-btn button {
+    cursor: pointer;
+}
+
+.modal-btn .checkBox {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 800;
+
+    font-size: 1.5rem;
+    background-color: #fff400;
+    margin-left: 10px;
+}
+
+.modal-btn .cancle {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    width: 100px;
+    padding: 5px;
+    background-color: #7f7f7f;
+    font-size: 1.5rem;
+}
+
+.section03 {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.btn-page a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-page {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--color-yellow);
+}
+
+.section03 {
     padding: 30px;
     padding-left: 100px;
     padding-right: 100px;
 }
 
-.section-1 h1 {
+.section03 h1 {
     text-indent: 20px;
     margin-bottom: 10px;
 }
 
-.section-1 p {
+.section03 p {
     padding: 0;
     font-size: 15px;
     margin-bottom: 4px;
 }
 
-.section-1 p:nth-child(3) {
+.section03 p:nth-child(3) {
     font-weight: bold;
     text-align: center;
     padding: 30px;
@@ -532,16 +605,16 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
     /* border: 1px solid #000; */
 }
 
-.section-1 .subHeader {
+.subHeader {
     margin-bottom: 10px;
     font-size: 17px;
 }
 
-.section-1 .lastContent {
+.lastContent {
     margin-bottom: 40px;
 }
 
-.section-1 a {
+.section03 a {
     display: inline-block;
     margin-bottom: 20px;
 }
@@ -569,112 +642,125 @@ input[id = "tab3"]:checked ~ .box-btn label[for = "tab3"] {
 span.modalCloseBtn {
     width: 50px;
     height: 50px;
-    color: #fff;
+    color: #000;
     font-size: 60px;
     font-weight: bold;
     position: absolute;
     right: 30px;
-    top: 100px;
+    top: 25%;
     cursor: pointer;
 }
-.section03{
-  padding-left: 100px;
-  padding-right: 100px;
-}
-.section03-title{
-padding: 10px;
-margin-left: 10px;
-font-size: 1.5rem;
+
+.section03-title {
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 1.5rem;
 }
 
 /*채팅*/
-.comment-container{
+.section04 {
+    padding: 0 100px;
+}
+
+.comment-container {
     height: 70%;
     border-radius: 10px;
     background-color: var(--color-blue);
     margin-top: 20px;
     overflow: auto;
 }
-.chat-part{
+
+.chat-part {
     padding: 20px;
     height: 550px;
 }
-.chat-chart{
+
+.chat-chart {
     padding: 15px;
     height: 90px;
     border-radius: 5px;
     background-color: rgb(203, 201, 201);
 }
-textarea{
+
+textarea {
     width: 100%;
-    height:100%;
+    height: 100%;
     resize: none;
 }
-.chat-btn{
+
+.chat-btn {
     float: right;
-    width: 120px;  
+    width: 120px;
 }
-.chat-btn button{
+
+.chat-btn button {
     transition: 0.3s;
 }
 
 .camera:hover {
     background-color: var(--color-cancle);
 }
-.upload:hover{
+
+.upload:hover {
     background-color: rgb(124, 124, 244);
 }
-.camera{
-background-color: var(--color-button);
-border: none;
-border-radius: 2px;
-width: 50px;
-padding: 5px;
-margin-right: 10px;
-    
+
+.camera {
+    background-color: var(--color-button);
+    border: none;
+    border-radius: 2px;
+    width: 50px;
+    padding: 5px;
+    margin-right: 10px;
+
 }
+
 .upload {
     border-radius: 2px;
     border: none;
     background-color: var(--color-blue);
     padding: 5px;
 }
-/*댓글창*/
 
-.chat-comment{
+/*댓글창*/
+.chat-comment {
     margin-top: 10px;
-   opacity: 1;
+    opacity: 1;
     height: 100px;
     display: flex;
     justify-content: space-between;
 }
 
-.chat-img{
-   text-align: center;
+.chat-img {
+    text-align: center;
     width: 70px;
     height: 70px;
 }
-.chat-img img{
+
+.chat-img img {
     border-radius: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.chat input[type ="text"]{
+
+.chat input[type="text"] {
     width: 100px;
     border-radius: 5px;
     border: none;
     padding: 3px;
     margin-bottom: 10px;
 }
-.chat-content{
+
+.chat-content {
     width: 80%;
 }
+
 .content-comment {
     height: 40px;
     transform: translateY(20px);
     padding: 5px;
-   
+
     border-radius: 10px;
     background-color: white;
     text-align: center;
@@ -683,7 +769,8 @@ margin-right: 10px;
     float: left;
     justify-content: center;
 }
-.like-btn{
+
+.like-btn {
     border-radius: 5px;
     padding: 5px;
     transition: 0.3s;
@@ -691,37 +778,53 @@ margin-right: 10px;
     border: none;
     background-color: #fff400;
 }
-.bomb-btn{
+
+.bomb-btn {
     font-size: 15px;
     border-radius: 5px;
     padding: 5px;
     border: none;
-     transition: 0.3s;
+    transition: 0.3s;
     background-color: #fff400;
 }
-.like-btn i:hover{
+
+.like-btn i:hover {
     transition: 0.3s;
     color: red;
 }
-.bomb-btn i:hover{
-      transition: 0.3s;
+
+.bomb-btn i:hover {
+    transition: 0.3s;
     color: blue;
 }
 
-.footer-title{
-   
+/*푸터*/
+.footer {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.footer-title {
+
     padding: 20px;
     width: 80%;
-    
+
 }
-.footer-bottom{
+
+.footer-bottom {
     font-size: 0.8rem;
     padding: 10px;
     display: flex;
-   
+
     height: auto;
-    
+
 }
+
+/*리뷰*/
+.section05 {
+    padding: 0 100px;
+}
+
 .reviewBox {
     padding: 15px;
 }
@@ -913,41 +1016,6 @@ margin-right: 10px;
     border-radius: 4px;
 }
 
-@font-face {
-    font-family: 'InkLipquid';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Bitgoeul_Bold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Bitgoeul_Medium';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Bitgoeul_Light';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Nanum Gothic';
-    src: url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .section-1 {
     padding: 30px;
 }
@@ -1010,19 +1078,6 @@ margin-right: 10px;
     transform: translate(-50%, -50%);
 }
 
-span.modalCloseBtn {
-    width: 50px;
-    height: 50px;
-    color: #fff;
-    font-size: 60px;
-    font-weight: bold;
-
-    position: absolute;
-    right: 30px;
-    top: 10px;
-
-    cursor: pointer;
-}
 
 /*리뷰*/
 .reviewBox {
@@ -1216,8 +1271,47 @@ span.modalCloseBtn {
     border-radius: 4px;
 }
 
-@media (max-width: 1199px) and (min-width: 768px) {
+/* 데스크탑 화면 (1024px 이상) */
+@media (min-width: 1025px) {
 
+    .line-tag button {
+        font-size: 1.8rem;
+    }
+
+    .box-img {
+        width: 65%;
+        height: 400px;
+    }
+
+    .box-set {
+        display: flex;
+    }
+
+    .box-btn label {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .box-intro {
+        width: 50%;
+    }
+
+    .box2 {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .box2-form {
+        width: 30%;
+    }
+
+    .box2-submit button {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
     .review {
         display: block;
         text-align: center;
@@ -1227,9 +1321,225 @@ span.modalCloseBtn {
         width: 100%;
         margin-top: 10px;
     }
+
+    .line-tag button {
+        font-size: 1.4rem;
+    }
+
+    .box-img {
+        width: 80%;
+        height: 300px;
+    }
+
+
+
+    .box-intro {
+        width: 60%;
+    }
+
+    .box-btn label {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+
+    .box2 {
+        width: 60%;
+    }
+
+    .box2-form {
+        width: 40%;
+    }
+
+    .comment {
+        font-size: 1.4rem;
+    }
+
+    .box2-submit button {
+        width: 70%;
+    }
 }
 
 @media (max-width: 767px) {
+    .header {
+        max-height: 80px;
+    }
+
+    .header .guide {
+        padding: 2px;
+
+        display: flex;
+        text-align: center;
+    }
+
+    .guide-button {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .check-tab {
+        transform: translateY(5px) translateX(-30px);
+        max-width: 13px;
+        max-height: 13px;
+        font-size: .9rem;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .box-show {
+        transform: translateY(-30px);
+    }
+
+    .line-tag button {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .box-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    table th,
+    td {
+        font-size: .8rem;
+    }
+
+    .box-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .box-btn label {
+        font-size: 1rem;
+        width: 30px;
+        height: 30px;
+    }
+
+    .box-set {
+        flex-direction: column;
+    }
+
+    .box-intro {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .box-intro .box-title {
+        font-size: 1.5rem;
+    }
+
+    .section02-box {
+        transform: translateY(-70px);
+        flex-direction: column;
+    }
+
+    .box2 {
+        margin-top: 10px;
+        height: 90%;
+        width: 90%;
+    }
+
+    .box2:nth-child(2) {
+        height: 70px;
+    }
+
+    .box2-form {
+        margin-top: 10px;
+        width: 90%;
+        font-size: .3rem;
+    }
+
+    .box2-form ul li input {
+
+        width: 90%;
+        border-radius: 5px;
+        height: 10px;
+        border: none;
+    }
+
+    .box2-title {
+        font-weight: 900;
+        font-size: 1rem;
+    }
+
+    .box2:nth-child(1) .comment {
+        font-size: 0.8rem;
+    }
+
+    .box2-form ul li {
+        font-weight: 900;
+        font-size: 0.6rem;
+        margin-top: 2px;
+    }
+
+    .box2-form button {
+        font-size: 0.8rem;
+        width: 20px;
+        height: 20px;
+    }
+
+    .modal-1 {
+        width: 90%;
+        height: auto;
+        max-width: 350px;
+    }
+
+    .box2-submit button {
+        width: 80%;
+    }
+
+    .box-comment {
+        transform: translateY(-10px);
+        top: 10px;
+        font-size: 0.5rem;
+    }
+
+    .box2-comment1 {
+        position: relative;
+        top: -5px;
+        height: 100px;
+    }
+
+    .comment span {
+        font-size: 0.6rem;
+    }
+
+    .box2-img img {
+        width: 50px;
+        scale: 1.1;
+        height: 50px;
+    }
+
+    .check-box {
+
+        transform: translateY(-140px) translateX(40px);
+        font-size: 0.5rem;
+        font-weight: 650;
+    }
+
+    .footer-title {
+
+        padding: 20px;
+        width: 80%;
+
+    }
+
+    .footer-bottom {
+        font-size: 0.5rem;
+        padding: 10px;
+        display: flex;
+
+        height: 150px;
+
+    }
+
+    .footer-logo img {
+        width: 70%;
+    }
+
     .review {
         display: block;
         text-align: center;
@@ -1270,247 +1580,5 @@ span.modalCloseBtn {
         width: 100%;
         margin-top: 10px;
     }
-}
 
-@media (max-width: 767px) {
-  .header {
-    max-height: 80px;
-  }
-
-  .header .guide {
-    padding: 2px;
-
-    display: flex;
-    text-align: center;
-  }
-  .guide-button{
-    padding: 5px;
-    font-size: 20px;
-  }
-  .check-tab{
-    transform: translateY(5px) translateX(-30px);
-    max-width: 13px;
-    max-height: 13px;
-    font-size: .9rem;
-  }
-  .logo img {
-    max-width: 100px;
-  }
-  .box-show{
-    transform: translateY(-30px);
-  }
-  .line-tag button {
-    font-size: 15px;
-    padding: 5px;
-  }
-
-  .box-img {
-    width: 100%;
-    height: 250px;
-  }
-  table th, td{
-    font-size: .8rem;
-  }
-  .box-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .box-btn label {
-    font-size: 1rem;
-    width: 30px;
-    height: 30px;
-  }
-
-  .box-set {
-    flex-direction: column;
-  }
-
-  .box-intro {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .box-intro .box-title {
-    font-size: 1.5rem;
-  }
-  .section02-box {
-    transform: translateY(-70px);
-    flex-direction: column;
-  }
-
-  .box2-form {
-    width: 100%;
-    height: auto;
-  }
-  .box2 {
-    margin-top: 10px;
-    height: 90%;
-    width: 90%;
-  }
-  .box2:nth-child(2){
-    height: 70px;
-  }
-  .box2-form{
-    margin-top: 10px;
-    width: 90%;
-    font-size: .3rem;
-  }
-  .box2-form ul li input {
-    
-    width: 90%;
-    border-radius: 5px;
-    height: 10px;
-    border: none;
-  }
-  .box2-title {
-    font-weight: 900;
-    font-size: 1rem;
-  }
-  .box2:nth-child(1) .comment {
-    font-size: 0.8rem;
-  }
-
-  .box2-form ul li {
-    font-weight: 900;
-    font-size: 0.6rem;
-    margin-top: 2px;
-  }
-  .box2-form button {
-    font-size: 0.8rem;
-    width: 20px;
-    height: 20px;
-  }
-
-  .modal-1 {
-    width: 90%;
-    height: auto;
-    max-width: 350px;
-  }
-
-  .box2-submit button {
-    width: 80%;
-  }
-  .box-comment {
-    transform: translateY(-10px);
-    top: 10px;
-    font-size: 0.5rem;
-  }
-  .box2-comment1 {
-    position: relative;
-    top: -5px;
-    height: 100px;
-  }
-  .comment span {
-    font-size: 0.6rem;
-  }
-
-  .box2-img img {
-    width: 50px;
-    scale: 1.1;
-    height: 50px;
-  }
-  .check-box {
-
-   transform: translateY(-140px) translateX(40px);
-    font-size: 0.5rem;
-    font-weight: 650;
-  }
-  .footer-title{
-   
-    padding: 20px;
-    width: 80%;
-    
-}
-.footer-bottom{
-    font-size: 0.5rem;
-    padding: 10px;
-    display: flex;
-   
-    height: 150px;
-    
-}
-.footer-logo img{
-    width: 70%;
-}
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .line-tag button {
-    font-size: 1.4rem;
-  }
-
-  .box-img {
-    width: 80%;
-    height: 300px;
-  }
-
-
-
-  .box-intro {
-    width: 60%;
-  }
-
-  .box-btn label {
-    width: 35px;
-    height: 35px;
-    font-size: 1.1rem;
-  }
-
-  .box2 {
-    width: 60%;
-  }
-
-  .box2-form {
-    width: 40%;
-  }
-
-  .comment {
-    font-size: 1.4rem;
-  }
-
-  .box2-submit button {
-    width: 70%;
-  }
-}
-
-/* 데스크탑 화면 (1024px 이상) */
-@media (min-width: 1025px) {
-  
-  .line-tag button {
-    font-size: 1.8rem;
-  }
-
-  .box-img {
-    width: 65%;
-    height: 400px;
-  }
-
-  .box-set {
-    display: flex;
-  }
-
-  .box-btn label {
-    width: 40px;
-    height: 40px;
-    font-size: 1.3rem;
-  }
-
-  .box-intro {
-    width: 50%;
-  }
-
-  .box2 {
-    width: 50%;
-    margin-left: 10px;
-  }
-
-  .box2-form {
-    width: 30%;
-  }
-
-  .box2-submit button {
-    width: 50%;
-  }
 }
