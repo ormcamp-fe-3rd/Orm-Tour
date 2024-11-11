@@ -32,38 +32,38 @@ function validTest(phone) {
     let phonrule = /^(01[016789]{1})[-\s]?[0-9]{3,4}[-\s]?[0-9]{4}$/;
     return phonrule.test(phone);
 }
-function birthFormatter(num){
-	if(!num){
-		return "";
-	}
-	var formatNum = '';
-	num=num.replace(/\s/gi, "");
-	if(num.length == 8){  
-		formatNum = num.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
-	}else{
-		formatNum = num;
-	}
-	return formatNum;
+function birthFormatter(num) {
+    if (!num) {
+        return "";
+    }
+    var formatNum = '';
+    num = num.replace(/\s/gi, "");
+    if (num.length == 8) {
+        formatNum = num.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
+    } else {
+        formatNum = num;
+    }
+    return formatNum;
 }
-    
+
 function phoneFormatter(num) {
-	var formatNum = '';
-	try{
-		if (num.length == 11) {
-			formatNum = num.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
-		} else if (num.length == 8) {
-			formatNum = num.replace(/(\d{4})(\d{4})/, '$1-$2');
-		} else {
-			if (num.indexOf('02') == 0) {
-				formatNum = num.replace(/(\d{2})(\d{4})(\d{4})/, '$1-$2-$3');
-			} else {
-				formatNum = num.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
-			}
-		}
-	} catch(e) {
-		formatNum = num;
-	}
-	return formatNum;
+    var formatNum = '';
+    try {
+        if (num.length == 11) {
+            formatNum = num.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+        } else if (num.length == 8) {
+            formatNum = num.replace(/(\d{4})(\d{4})/, '$1-$2');
+        } else {
+            if (num.indexOf('02') == 0) {
+                formatNum = num.replace(/(\d{2})(\d{4})(\d{4})/, '$1-$2-$3');
+            } else {
+                formatNum = num.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+            }
+        }
+    } catch (e) {
+        formatNum = num;
+    }
+    return formatNum;
 }
 
 function validEmail(email) {
@@ -120,16 +120,16 @@ function validateEmail(emailValue) {
 // 이름 유효성 검사 
 function validateName(nameValue) {
     if (!validName(nameValue) || nameValue === "") {
-        
+
     } else {
-        
+
     }
 }
 
 // 버튼 활성화 메소드
 function updateButtonState() {
     const isPhoneValid = validTest(phoneValid.value);
-   
+
     const isEmailValid = validEmail(emailValid.value);
 
 
@@ -156,34 +156,31 @@ function debounce(func, delay = 300) {
 // 인원수 파악 버튼 
 const plus = document.querySelector('.plus');
 const minus = document.querySelector('.minus');
-const result = document.getElementById('result');  // 결과를 보여줄 요소
-const price = document.getElementById('price');  // 가격을 보여줄 요소
+const result = document.getElementById('result');
+const price = document.getElementById('price');
 
-let i = 1;  // 초기값
-let j = 330000;  // 가격
+let i = 1;
+let j = 330000;
 
 result.innerText = i;
 price.innerText = j * i;
 
 price.style.color = 'blue';
 plus.addEventListener('click', function () {
-    // 수량이 10보다 작을 때만 증가
     if (i < 10) {
         i++;
-        result.innerText = i;  // 수량 화면에 업데이트
-
+        result.innerText = i;
         price.innerText = j * i;
     }
 
 });
 
-// 'minus' 버튼 클릭 시
 minus.addEventListener('click', function () {
-    // 수량이 1보다 클 때만 감소
-    if (i > 1) {
-        i--;  // 수량 감소
 
-        result.innerText = i;  // 수량 화면에 업데이트
+    if (i > 1) {
+        i--;
+
+        result.innerText = i;
         price.innerText = j * i;
     }
 
@@ -193,7 +190,6 @@ minus.addEventListener('click', function () {
 // 모달창 화면에 보이게 제작하기 
 nameValid.addEventListener('change', function () {
     try {
-        // 'name' 입력 필드의 값을 가져옴
         const Form1 = document.getElementById('name').value;
 
         const nameVal = document.getElementById('nameVal');
@@ -210,7 +206,6 @@ nameValid.addEventListener('change', function () {
 
 phoneValid.addEventListener('change', function () {
     try {
-        //  값 가져옴
         const Form2 = document.getElementById('phone').value;
         const phoneVal = document.getElementById('phoneVal');
         if (phoneVal) {
@@ -279,7 +274,7 @@ document.addEventListener("click", function (event) {
 
 
 
-// 더 좋은 방법 있으면 알려주세요 ... ㅠㅠㅠ 
+// 채팅
 const btnUpload = document.querySelector('.upload');
 const chatContainer = document.querySelector('.comment-container'); // 채팅 댓글을 추가할 부모 요소
 const btnnUpload = document.querySelector('.upload');
@@ -350,7 +345,7 @@ function focusArea() {
     if (noChat.textContent.trim() === "") noChat.focus();
 };
 
-//지균님 
+//리뷰 캐러셀
 let currentIndex = 0;
 const reviewContainers = document.querySelector(".reviewContainers");
 const reviewContainer = document.querySelector(".reviewContainer");
@@ -380,7 +375,6 @@ const ratingElements = document.querySelectorAll(".reviewContainers .rating");
 let sum = 0;
 let count = 0;
 
-// 각 rating 요소의 값을 더하고 개수를 셉니다.
 for (let i = 0; i < ratingElements.length; i++) {
     const ratingValue = parseFloat(ratingElements[i].innerText);
     sum += ratingValue;
