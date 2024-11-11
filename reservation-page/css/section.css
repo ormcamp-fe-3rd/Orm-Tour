@@ -329,8 +329,9 @@ input[id="tab3"]:checked~.box-btn label[for="tab3"] {
 .section02 {
 
     padding-left: 100px;
-    padding-right: 100px;
-    height: 300px;
+
+    padding-right: 100px;    
+  
 
 }
 
@@ -564,6 +565,20 @@ li {
     font-size: 1.5rem;
 }
 
+
+
+.btn-page a{
+  text-decoration: none;
+  color: black;
+}
+.btn-page{
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--color-yellow);
+}
+/*지균님*/
+
+
 .section03 {
     padding-left: 100px;
     padding-right: 100px;
@@ -580,10 +595,12 @@ li {
     background-color: var(--color-yellow);
 }
 
+
 .section03 {
     padding: 30px;
     padding-left: 100px;
     padding-right: 100px;
+
 }
 
 .section03 h1 {
