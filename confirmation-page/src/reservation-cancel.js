@@ -1,16 +1,17 @@
 const modal = document.getElementById("modal");
-const cancelBtn = document.getElementById("cancel-button")
-const confirmCancelBtn = document.getElementById("confirm-cancel")
-const cancelCancelBtn = document.getElementById("cancel-cancel")
-let reservationStatus = document.getElementById("status");
+const cancelBtn = document.getElementById("cancel-button");
+const confirmCancelBtn = document.getElementById("confirm-cancel");
+const cancelCancelBtn = document.getElementById("cancel-cancel");
 
 cancelBtn.addEventListener("click", ()=>{
     modal.style.display = "block";
 });
 
 confirmCancelBtn.addEventListener("click", ()=>{
+    reservationStatus = document.getElementById("status"); //클릭 시점에 불러옴
+
     modal.style.display = "none";
-    reservationStatus.innerHTML = `<p id="status">예약취소</p>`;
+    reservationStatus.innerText = "예약취소";
     checkStatus();
 });
 
