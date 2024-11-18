@@ -9,6 +9,10 @@
   --color-yellow: rgb(255, 244, 0);
 }
 
+main {
+  margin-top: 100px;
+}
+
 main.active {
   filter: brightness(0.5);
   background-color: rgb(0, 0, 0, 0.7);
@@ -19,69 +23,59 @@ header.active {
   background-color: rgb(0, 0, 0, 0.7);
 }
 
-.header {
-  position: relative;
-  height: 100px;
-}
-
-.header .guide {
-  border-bottom: solid 1px gray;
-  background-color: white;
-  z-index: 100;
-  position: fixed;
-  padding: 10px;
-  display: flex;
+header {
+  top: 0px;
   width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9); /* 투명도 살짝 추가*/
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 추가 */
+}
+
+.header {
+  top: 0px;
+  width: 80%;
+  height: 100px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.guide button {
-  background-color: rgb(255, 255, 0);
-  border: none;
+.header-tab {
   border-radius: 10px;
-  font-weight: 800;
-  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
 }
 
-.line-tag {
-  position: relative;
+.header-tab a {
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: inherit;
+  width: 96px;
+  height: 40px;
+  background-color: #f2ec62;
 }
 
-.line-tag .check-tab {
-  position: absolute;
-  top: -15px;
-  text-align: center;
-  width: 20px;
-  border-radius: 20px;
-  background-color: orangered;
-  color: white;
-  height: 20px;
-  opacity: 0;
-  transition: 0.5s;
+.header-tab a:active {
+  background-color: #fff400;
 }
 
-.check-tab.active {
-  opacity: 1;
+.header-logo {
+  margin: 15px 60px 15px 70px;
+  width: 200px;
+  height: 70px;
+  background-image: url("/common/images/ormlogo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-/*section01*/
-.line-tag button {
-  background-color: var(--color-button);
-  color: black;
-  font-weight: 900;
-  padding: 5px;
-  border-radius: 10px;
-  border: none;
-  transition: 0.3s;
-  font-size: 1.5rem;
-  margin-right: 10px;
-}
-
-.line-tag button:hover {
-  background-color: var(--color-gray);
-}
-
-.section01 {
+.basic-information {
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -236,13 +230,12 @@ input[id="tab3"]:checked ~ .box-btn label[for="tab3"] {
   padding: 2px;
 }
 
-/*section02*/
-.section02 {
+.reservation {
   padding-left: 100px;
   padding-right: 100px;
 }
 
-.section02-box {
+.reservation-box {
   height: 100%;
   width: 100%;
   display: flex;
@@ -482,11 +475,6 @@ li {
   background-color: var(--color-yellow);
 }
 
-.section03 {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
 .btn-page a {
   text-decoration: none;
   color: black;
@@ -498,24 +486,24 @@ li {
   background-color: var(--color-yellow);
 }
 
-.section03 {
+.details {
   padding: 30px;
   padding-left: 100px;
   padding-right: 100px;
 }
 
-.section03 h1 {
+.details h1 {
   text-indent: 20px;
   margin-bottom: 10px;
 }
 
-.section03 p {
+.details p {
   padding: 0;
   font-size: 15px;
   margin-bottom: 4px;
 }
 
-.section03 p:nth-child(3) {
+.details p:nth-child(3) {
   font-weight: bold;
   text-align: center;
   padding: 30px;
@@ -531,7 +519,7 @@ li {
   margin-bottom: 40px;
 }
 
-.section03 a {
+.details a {
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -556,14 +544,14 @@ span.modal-closebtn {
   cursor: pointer;
 }
 
-.section03-title {
+.details-title {
   padding: 10px;
   margin-left: 10px;
   font-size: 1.5rem;
 }
 
 /*채팅*/
-.section04 {
+.chat-area {
   padding: 0 100px;
 }
 
@@ -721,7 +709,7 @@ textarea {
 }
 
 /*리뷰*/
-.section05 {
+.review-area {
   padding: 0 100px;
 }
 
@@ -905,47 +893,6 @@ textarea {
   height: 100px;
   object-fit: fill;
   border-radius: 4px;
-}
-
-.section-1 {
-  padding: 30px;
-}
-
-.section-1 h1 {
-  text-indent: 20px;
-  margin-bottom: 10px;
-}
-
-.section-1 p {
-  padding: 0;
-  font-size: 15px;
-  margin-bottom: 4px;
-}
-
-.section-1 p:nth-child(3) {
-  font-weight: bold;
-  text-align: center;
-  padding: 30px;
-  margin-bottom: 30px;
-}
-
-.section-1 .sub-header {
-  margin-bottom: 10px;
-  font-size: 17px;
-}
-
-.section-1 .last-content {
-  margin-bottom: 40px;
-}
-
-.section-1 a {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.section-1 a:hover {
-  color: #aaa;
-  cursor: pointer;
 }
 
 .modal1,
