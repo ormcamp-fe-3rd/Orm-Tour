@@ -1,10 +1,4 @@
-* {
-  margin: 0 auto;
-}
-
-body {
-  font-family: "Bitgoeul_Light", sans-serif;
-}
+@import url(/common/css/common.css);
 
 section {
   width: 100%;
@@ -13,46 +7,7 @@ section {
   position: relative;
 }
 
-@font-face {
-  font-family: "InkLipquid";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Bitgoeul_Bold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Bold.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Bitgoeul_Medium";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Medium.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Bitgoeul_Light";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Light.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Nanum Gothic";
-  src: url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/*----------css 통일성을 위해 header 추가 ----------- */
+/*---------- header ----------- */
 header {
   top: 0px;
   width: 100%;
@@ -61,6 +16,7 @@ header {
   background-color: rgba(255, 255, 255, 0.9); /* 투명도 살짝 추가*/
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 추가 */
 }
+
 .header {
   top: 0px;
   width: 80%;
@@ -77,10 +33,6 @@ header {
   justify-content: center;
   align-items: center;
   margin: 10%;
-}
-
-.header-tab li {
-  list-style: none;
 }
 
 .header-tab a {
@@ -102,7 +54,7 @@ header {
   margin: 15px 60px 15px 70px;
   width: 200px;
   height: 70px;
-  background-image: url("../../main-page/src/images/ormlogo.png");
+  background-image: url("/common/images/ormlogo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -320,13 +272,13 @@ header {
   width: 150px;
   height: 100px;
   background-color: transparent;
-  background-image: url("../../main-page/src/images/ormlogo.png");
+  background-image: url("/common/images/ormlogo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-/*-----------footer 통일성 수정 -------------*/
+/*----------- footer -------------*/
 @media (max-width: 1050px) {
   .footer {
     padding: 100px 150px 100px 150px;
