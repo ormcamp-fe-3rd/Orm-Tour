@@ -1,3 +1,5 @@
+@import url(/common/css/common.css);
+
 :root {
   --color-cancle: var(--color-gray);
   --color-tab: var(--color-blue);
@@ -26,15 +28,15 @@ header.active {
 header {
   top: 0px;
   width: 100%;
+  height: 100px;
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   background-color: rgba(255, 255, 255, 0.9); /* 투명도 살짝 추가*/
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 추가 */
 }
 
 .header {
-  top: 0px;
-  width: 80%;
+  width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
@@ -56,8 +58,8 @@ header {
   font-weight: 500;
   color: inherit;
   text-decoration: inherit;
-  width: 96px;
-  height: 40px;
+  width: 130px;
+  height: 50px;
   background-color: #f2ec62;
 }
 
@@ -241,6 +243,12 @@ input[id="tab3"]:checked ~ .box-btn label[for="tab3"] {
   display: flex;
 }
 
+.box2-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .box2-form button {
   width: 25px;
   height: 25px;
@@ -305,8 +313,8 @@ input[id="tab3"]:checked ~ .box-btn label[for="tab3"] {
 
 .box2-img img {
   width: 100px;
-  scale: 1.1;
   height: 100px;
+  transform: scale(1.1);
 }
 
 .box2:nth-child(2) .comment {
@@ -351,12 +359,13 @@ input[id="tab3"]:checked ~ .box-btn label[for="tab3"] {
 .box2-form ul li {
   font-weight: 900;
   font-size: 1rem;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 .box2-title {
   font-weight: 900;
   font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 /*예약하기*/
@@ -1339,8 +1348,8 @@ textarea {
 
   .box2-img img {
     width: 50px;
-    scale: 1.1;
     height: 50px;
+    transform: scale(1.1);
   }
 
   .check-box {
