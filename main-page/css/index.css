@@ -1,53 +1,4 @@
-* {
-  margin: 0 auto;
-}
-
-body {
-  font-family: "Bitgoeul_Light", sans-serif;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-@font-face {
-  font-family: "InkLipquid";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Bitgoeul_Medium";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Medium.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Bitgoeul_Light";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Light.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Bitgoeul_Bold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Bitgoeul_Bold.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Nanum Gothic";
-  src: url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
-  font-weight: normal;
-  font-style: normal;
-}
-
+@import "../../common/css/common.css";
 html {
   scroll-behavior: smooth; /* 부드러운 스크롤을 적용 */
   scroll-padding-top: 150px; /* 스크롤 시, 상단 여백을 100px로 설정 */
@@ -519,7 +470,7 @@ video {
   width: 150px;
   height: 100px;
   background-color: transparent;
-  background-image: url("../src/images/ormlogo.png");
+  background-image: url("../../common/images/ormlogo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
