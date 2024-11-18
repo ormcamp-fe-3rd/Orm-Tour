@@ -313,8 +313,8 @@ input[id="tab3"]:checked ~ .box-btn label[for="tab3"] {
 
 .box2-img img {
   width: 100px;
-  scale: 1.1;
   height: 100px;
+  transform: scale(1.1);
 }
 
 .box2:nth-child(2) .comment {
@@ -1348,8 +1348,8 @@ textarea {
 
   .box2-img img {
     width: 50px;
-    scale: 1.1;
     height: 50px;
+    transform: scale(1.1);
   }
 
   .check-box {
