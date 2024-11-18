@@ -1,84 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./confirmation-page/css/confirmation.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./confirmation-page/css/confirmation.css" />
     <title>예약 확인</title>
-</head> 
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header">
-            <a class="header-logo" href="./index.html"></a>
-            <div class="header-tab">
-                <a href="javascript:history.back()"  class="header-tab">뒤로가기</a>
-            </div>
+      <div class="header">
+        <a class="header-logo" href="./index.html"></a>
+        <div class="header-tab">
+          <a href="javascript:history.back()" class="header-tab">뒤로가기</a>
         </div>
+      </div>
     </header>
     <section class="confrimation">
-        <form id="search-form">
-            <p class="find-title">예약 내역 조회</p>
-            <div class="find-wrap">
-                <div class="find">
-                    <label for="order-name" class="label">예약자 성명</label>
-                    <input type="text" id="order-name" name="order-name">
-                </div>
-                <div class="find">
-                    <label for="phone-number" class="label">연락처</label>
-                    <input type="text" id="phone-number" name="phone-number">
-                </div>
-            </div>
-            <button type="submit">예약 조회</button>
-        </form>
-        <div class="result">            
-            <p class="result-title">예약 내역</p>
-            <div class="result-wrap">
-                <div class="result-label">
-                    <p>예약 번호 </p>
-                    <p>예약 날짜 </p>
-                    <p>예약자 성명 </p>
-                    <p>연락처 </p>
-                    <p>이메일 </p>
-                    <p>예약 상품 </p>
-                    <p>예약 인원 </p>
-                    <p>예약 금액 </p>
-                    <p>예약 상태 </p>
-                </div>
-                <div id="result">
-                </div>
-            </div>
+      <form id="search-form">
+        <p class="find-title">예약 내역 조회</p>
+        <div class="find-wrap">
+          <div class="find">
+            <label for="order-name" class="label">예약자 성명</label>
+            <input type="text" id="order-name" name="order-name" />
+          </div>
+          <div class="find">
+            <label for="phone-number" class="label">연락처</label>
+            <input type="text" id="phone-number" name="phone-number" />
+          </div>
         </div>
-        <div class="cancel">
-            <button id="cancel-button" type="button" disabled>예약 취소</button>
-            <div id="modal">
-                <div class="modal-body">
-                    <h2>예약 취소</h2>
-                    <p>이 작업은 되돌릴 수 없습니다. 
-                        <br>정말로 예약을 취소하시겠습니까?</p>
-                    <div class="confirm-btn">
-                        <button id="confirm-cancel" type="button">확인</button>
-                        <button id="cancel-cancel" type="button">취소</button>
-                    </div>
-                </div>
-            </div>
+        <button type="submit">예약 조회</button>
+      </form>
+      <div class="result">
+        <p class="result-title">예약 내역</p>
+        <div class="result-wrap">
+          <div class="result-label">
+            <p>예약 번호</p>
+            <p>예약 날짜</p>
+            <p>예약자 성명</p>
+            <p>연락처</p>
+            <p>이메일</p>
+            <p>예약 상품</p>
+            <p>예약 인원</p>
+            <p>예약 금액</p>
+            <p>예약 상태</p>
+          </div>
+          <div id="result"></div>
         </div>
-    </div>
+      </div>
+      <div class="cancel">
+        <button id="cancel-button" type="button" disabled>예약 취소</button>
+        <div id="modal">
+          <div class="modal-body">
+            <h2>예약 취소</h2>
+            <p>
+              이 작업은 되돌릴 수 없습니다. <br />정말로 예약을
+              취소하시겠습니까?
+            </p>
+            <div class="confirm-btn">
+              <button id="confirm-cancel" type="button">확인</button>
+              <button id="cancel-cancel" type="button">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <footer class="footer">
-        <div class="footer-title">고객센터</div>
-        <div class="footer-bottom">
-            <div class="footer-text1">
-                (주) 오름투어<br />주소 서울 강남구 역삼로 156 태광빌딩 2층
-            </div>
-            <div class="footer-text2">
-                고객센터<br />
-                투어 1588-0000 | 티켓 1522-0000<br />
-                팩스 02-000-0000 | 이메일 helpdesk@ormtour.com
-            </div>
-            <div class="footer-logo"></div>
+      <div class="footer-title">고객센터</div>
+      <div class="footer-bottom">
+        <div class="footer-text1">
+          (주) 오름투어<br />주소 서울 강남구 역삼로 156 태광빌딩 2층
         </div>
+        <div class="footer-text2">
+          고객센터<br />
+          투어 1588-0000 | 티켓 1522-0000<br />
+          팩스 02-000-0000 | 이메일 helpdesk@ormtour.com
+        </div>
+        <div class="footer-logo"></div>
+      </div>
     </footer>
-    <script src="./confirmation-page/src/conf-page-search.js"></script>
-    <script src="./confirmation-page/src/conf-page-cancel.js"></script>
-</body>
+    <script src="./confirmation-page/src/conf-search.js"></script>
+    <script src="./confirmation-page/src/conf-cancel.js"></script>
+  </body>
 </html>
