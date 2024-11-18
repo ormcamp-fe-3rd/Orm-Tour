@@ -51,7 +51,6 @@ function displayReservationDetails(event) {
         `
     };
     
-    // 예약이 조회되면 예약취소 버튼 활성화
     if(reservation) {
         document.getElementById("cancel-button").disabled = false;
     } else {
@@ -62,18 +61,14 @@ function displayReservationDetails(event) {
 document.getElementById('search-form').addEventListener('submit', displayReservationDetails);
 
 
-// 예약자 성명 - 영어 대문자, 한글, 공백(영문 이름 고려) 입력 허용
 function validateNameInput(event) {
     event.target.value = event.target.value.toUpperCase().replace(/[^A-Zㄱ-힣]/s, ''); 
 };
 
-document.getElementById('order-name').addEventListener('input', validateNameInput);
-
-
-// 전화번호 자동 하이픈
 function autoHyphenPhoneNumber(event) {
     const revNum = event.target.value.replace(/-/g, '').replace(/^(\d{2,3})(\d{3,4})(\d{4})$/g, "$1-$2-$3");
     event.target.value = revNum;
 };
 
+document.getElementById('order-name').addEventListener('input', validateNameInput);
 document.getElementById('phone-number').addEventListener('input', autoHyphenPhoneNumber);
