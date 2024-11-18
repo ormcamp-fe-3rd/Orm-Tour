@@ -1,4 +1,5 @@
-@import "../../common/css/common.css";
+@import url(/common/css/common.css);
+
 html {
   scroll-behavior: smooth; /* 부드러운 스크롤을 적용 */
   scroll-padding-top: 150px; /* 스크롤 시, 상단 여백을 100px로 설정 */
