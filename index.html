@@ -10,7 +10,7 @@
 
   <body>
     <video
-      id="backgroundVideo"
+      id="background-video"
       src="./main-page/src/images/0003.webm"
       autoplay
       muted
@@ -19,16 +19,20 @@
     <header>
       <div class="header">
         <div class="header-tab">
-          <img class="header-logo" src="./common/images/ormlogo.png" alt="" />
-          <a href="#section02">패키지 상품</a>
-          <a href="#section03">이벤트</a>
-          <a href="#section04">유용한 정보</a>
-          <a href="#section05">고객센터</a>
+          <img
+            class="header-logo"
+            src="./common/images/ormlogo.png"
+            alt="로고"
+          />
+          <a href="#package">패키지 상품</a>
+          <a href="#event">이벤트</a>
+          <a href="#information">유용한 정보</a>
+          <a href="#cs">고객센터</a>
           <a href="./confirmation.html">예약확인</a>
         </div>
       </div>
     </header>
-    <section id="section01">
+    <section id="banner">
       <div class="banner">
         <div class="banner-text">
           <!-- "당신의 여정에 옮을 더하는 맞춤 패키지 여행" -->
@@ -47,7 +51,7 @@
         />
       </div>
     </section>
-    <section id="section02">
+    <section id="package">
       <h2 class="section-title">패키지상품</h2>
       <div class="carousel-container">
         <button class="carousel-button left">
@@ -90,7 +94,7 @@
         </button>
       </div>
     </section>
-    <section id="section03">
+    <section id="event">
       <h2 class="section-title">이벤트</h2>
       <div class="slider">
         <div class="slides">
@@ -131,7 +135,7 @@
         </div>
       </div>
     </section>
-    <section id="section04">
+    <section id="informations">
       <h2 class="section-title">유용한 정보</h2>
       <div class="informations">
         <!-- 카드 1 -->
@@ -189,7 +193,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer" id="section05">
+    <footer class="footer" id="cs">
       <div class="footer-title">고객센터</div>
       <div class="footer-bottom">
         <div class="footer-text1">
@@ -208,8 +212,9 @@
     <script src="./main-page/src/index-product.js"></script>
     <script src="./main-page/src/index-event.js"></script>
 
-  //  <script src="./main-page/src/main-page-product.js"></script>
-  //  <script src="./main-page/src/main-page-event.js"></script>
-
+    //
+    <script src="./main-page/src/main-page-product.js"></script>
+    //
+    <script src="./main-page/src/main-page-event.js"></script>
   </body>
 </html>

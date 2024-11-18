@@ -223,6 +223,7 @@ video {
   position: relative;
   width: 100%;
   max-width: 780px;
+  height: 361px;
   overflow: hidden;
   margin: 0 auto;
   border: none;
@@ -315,14 +316,14 @@ video {
 }
 
 /* 섹션 스타일 */
-#section01 {
+#banner {
   margin-bottom: 120px; /* 섹션 사이의 간격 줄임 */
 }
 
 /* 각 섹션에 공통 클래스를 추가 */
-#section02,
-#section03,
-#section04 {
+#package,
+#event,
+#information {
   padding-top: 20px;
   padding-bottom: 10px; /* 아래쪽 간격을 줄임 */
   margin-bottom: 120px; /* 섹션 사이의 간격 줄임 */
@@ -332,9 +333,9 @@ video {
   opacity: 0; /* 처음에는 숨김 */
   transition: opacity 2s ease; /* 서서히 나타나도록 애니메이션 */
 }
-.show-section02,
-.show-section03,
-.show-section04 {
+.show-package,
+.show-event,
+.show-information {
   opacity: 1 !important; /* 완전히 보이게 */
   display: flex !important;
   flex-direction: column; /* 세로로 정렬 */
@@ -346,7 +347,7 @@ video {
 .informations {
   display: flex;
   gap: 20px;
-  max-width: 800px; /* section03의 최대폭과 동일하게 설정 */
+  max-width: 800px; /* event의 최대폭과 동일하게 설정 */
   margin: 0 auto;
   flex-wrap: wrap; /* 화면이 좁아질 때 줄바꿈 */
   justify-content: center; /* 카드들이 중앙 정렬되도록 설정 */

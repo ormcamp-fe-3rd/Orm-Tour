@@ -1,18 +1,17 @@
 function setupVideoAnimations() {
-  const video = document.getElementById("backgroundVideo");
+  const video = document.getElementById("background-video");
   const header = document.querySelector(".header");
   const banner = document.querySelector(".banner");
   const footer = document.querySelector(".footer");
   const bannerTexts = document.querySelectorAll(".banner-text span");
-  const packageProducts = document.getElementById("section02");
-  const events = document.getElementById("section03");
-  const informations = document.getElementById("section04");
+  const packageProducts = document.getElementById("package");
+  const events = document.getElementById("event");
+  const informations = document.getElementById("information");
   const fadeOutTime = 0.5; // 애니메이션 시작 시간 (초)
 
   let animationCompleted = false; // 초기 애니메이션 완료 여부를 추적하는 변수
 
   function checkVideoFadeOut() {
-
     if (video.duration - video.currentTime <= fadeOutTime) {
       video.classList.add("fade-out");
       header.classList.add("show-header"); // header가 보여지게
@@ -20,9 +19,9 @@ function setupVideoAnimations() {
       setTimeout(() => {
         banner.classList.add("show-banner"); // banner가 보여지게
         footer.classList.add("show-footer"); // footer가 보여지게
-        packageProducts.classList.add("show-section02");
-        events.classList.add("show-section03");
-        informations.classList.add("show-section04");
+        packageProducts.classList.add("show-package");
+        events.classList.add("show-event");
+        informations.classList.add("show-information");
 
         // 초기 애니메이션을 순차적으로 실행
         bannerTexts.forEach((letter, index) => {
@@ -45,7 +44,8 @@ function setupVideoAnimations() {
     // 마우스 hover 애니메이션 추가
     bannerTexts.forEach((bannerText) => {
       bannerText.addEventListener("mouseenter", () => {
-        if (animationCompleted) { // 초기 애니메이션이 끝났을 때만 hover 애니메이션 적용
+        if (animationCompleted) {
+          // 초기 애니메이션이 끝났을 때만 hover 애니메이션 적용
           bannerText.classList.add("hover-animation");
         }
       });
