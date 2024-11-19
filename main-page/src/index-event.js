@@ -1,4 +1,3 @@
-// 슬라이드 섹션
 const slides = document.querySelector(".slides");
 const slideElements = document.querySelectorAll(".slide");
 const slideCount = slideElements.length;
@@ -75,23 +74,25 @@ function updateSlidePosition() {
   }
 
   // 현재 카드 스타일링 강조
+  const totalSlideCount = slides.children.length;
+
   document.querySelectorAll(".slide").forEach((item) => {
     item.classList.remove("active");
   });
   document.querySelectorAll(".slide")[slideIndex + 1].classList.add("active");
 
-  if (slideIndex === slideCount + 3) {
-    document.querySelectorAll(".slide")[slideCount - 2].classList.add("active");
+  if (slideIndex === totalSlideCount - slidesToShow) {
+    document
+      .querySelectorAll(".slide")
+      [slidesToShow + 1].classList.add("active");
   }
 
-  if (slideIndex === slideCount - 4) {
-    document.querySelectorAll(".slide")[slideCount + 3].classList.add("active");
+  if (slideIndex === slidesToShow - 1) {
+    document
+      .querySelectorAll(".slide")
+      [totalSlideCount - slidesToShow].classList.add("active");
   }
 }
-
-// 카드 강조 첫 화면 조정
-slides.style.transform = "translateX(-100%)";
-slideElements[4].classList.add("active");
 
 function updateProgress() {
   const currentPage = ((slideIndex - slidesToShow) % slideCount) + 1;
