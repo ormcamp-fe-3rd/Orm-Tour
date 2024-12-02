@@ -17,11 +17,11 @@
     </header>
     <section class="confrimation">
       <form id="search-form">
-        <h2 class="find-title" tabindex="1">예약 내역 조회</h2>
+        <h2 class="find-title" tabindex="0">예약 내역 조회</h2>
         <div class="find-wrap">
           <div class="find">
             <label for="order-name" class="label">예약자 성명</label>
-            <input type="text" id="order-name" name="order-name" tabindex="1" />
+            <input type="text" id="order-name" name="order-name" tabindex="0" />
           </div>
           <div class="find">
             <label for="phone-number" class="label">연락처</label>
@@ -29,36 +29,50 @@
               type="text"
               id="phone-number"
               name="phone-number"
-              tabindex="1"
+              tabindex="0"
             />
           </div>
         </div>
-        <button type="submit" tabindex="1">예약 조회</button>
+        <button type="submit" tabindex="0">예약 조회</button>
       </form>
       <div class="result">
-        <h2 class="result-title" tabindex="1">예약 내역</h2>
+        <h2 class="result-title" tabindex="0">예약 내역</h2>
         <div class="result-wrap">
-          <div class="result-label">
-            <p tabindex="1">예약 번호</p>
-            <p tabindex="3">예약 날짜</p>
-            <p tabindex="5">예약자 성명</p>
-            <p tabindex="7">연락처</p>
-            <p tabindex="9">이메일</p>
-            <p tabindex="11">예약 상품</p>
-            <p tabindex="13">예약 인원</p>
-            <p tabindex="15">예약 금액</p>
-            <p tabindex="17">예약 상태</p>
+          <div class="result-row" tabindex="0">
+            <div class="result-label">예약 번호</div>
+            <div class="result-value"></div>
           </div>
-          <div id="result">
-            <p tabindex="2"></p>
-            <p tabindex="4"></p>
-            <p tabindex="6"></p>
-            <p tabindex="8"></p>
-            <p tabindex="10"></p>
-            <p tabindex="12"></p>
-            <p tabindex="14"></p>
-            <p tabindex="16"></p>
-            <p tabindex="18" class="status"></p>
+          <div class="result-row" tabindex="0">
+            <div class="result-label">예약 날짜</div>
+            <div class="result-value"></div>
+          </div>
+          <div class="result-row" tabindex="0">
+            <div class="result-label">예약자 성명</div>
+            <div class="result-value"></div>
+          </div>
+          <div class="result-row" tabindex="0">
+            <div class="result-label">연락처</div>
+            <div class="result-value"></div>
+          </div>
+          <div class="result-row" tabindex="0">
+            <div class="result-label">이메일</div>
+            <div class="result-value"></div>
+          </div>
+          <div class="result-row" tabindex="0">
+            <div class="result-label">예약 상품</div>
+            <div class="result-value"></div>
+          </div>
+          <div class="result-row" tabindex="0">
+            <div class="result-label">예약 인원</div>
+            <div class="result-value"></div>
+          </div>
+          <div class="result-row" tabindex="0">
+            <div class="result-label">예약 금액</div>
+            <div class="result-value"></div>
+          </div>
+          <div class="result-row" tabindex="0">
+            <div class="result-label">예약 상태</div>
+            <div class="result-value status"></div>
           </div>
         </div>
       </div>

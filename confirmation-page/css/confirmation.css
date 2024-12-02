@@ -133,25 +133,21 @@ section {
   position: relative;
 }
 
-.result-label p {
+.result-row {
+  display: flex;
   font-size: 1.2rem;
   line-height: 50px;
   border-bottom: 1px solid #ccc;
 }
 
-#result {
-  position: absolute;
-  top: 0px;
-  left: 150px;
+.result-label {
+  width: 40%;
 }
 
-#result p {
+.result-value {
   font-size: 1.2rem;
-  line-height: 51px;
   color: gray;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  width: 60%;
 }
 
 /* 예약 취소 */
