@@ -28,25 +28,27 @@ function displayReservationDetails(event) {
 
   const orderName = document.getElementById("order-name").value;
   const phoneNumber = document.getElementById("phone-number").value;
-  const result = document.getElementById("result");
-  const resultTable = result.getElementsByTagName("p");
+  const resultValue = document.getElementsByClassName("result-value");
 
   const reservation = resList.find(
     (a) => a.name === orderName && a.phoneNumber === phoneNumber
   );
 
   if (reservation) {
-    resultTable[0].textContent = `${reservation.orderID}`;
-    resultTable[1].textContent = `${reservation.date}`;
-    resultTable[2].textContent = `${reservation.name}`;
-    resultTable[3].textContent = `${reservation.email}`;
-    resultTable[4].textContent = `${reservation.phoneNumber}`;
-    resultTable[5].textContent = `${reservation.product}`;
-    resultTable[6].textContent = `${reservation.guests}`;
-    resultTable[7].textContent = `${reservation.totalAmount}`;
-    resultTable[8].textContent = `${reservation.status}`;
+    resultValue[0].textContent = `${reservation.orderID}`;
+    resultValue[1].textContent = `${reservation.date}`;
+    resultValue[2].textContent = `${reservation.name}`;
+    resultValue[3].textContent = `${reservation.email}`;
+    resultValue[4].textContent = `${reservation.phoneNumber}`;
+    resultValue[5].textContent = `${reservation.product}`;
+    resultValue[6].textContent = `${reservation.guests}`;
+    resultValue[7].textContent = `${reservation.totalAmount}`;
+    resultValue[8].textContent = `${reservation.status}`;
   } else {
-    resultTable[0].textContent = "예약 내역을 찾을 수 없습니다.";
+    for (let i = 0; i < resultValue.length; i++) {
+      resultValue[i].textContent = "";
+    }
+    resultValue[0].textContent = "예약 내역을 찾을 수 없습니다.";
   }
 
   if (reservation) {
