@@ -21,7 +21,7 @@ function closeModal() {
 }
 
 function confirmedCancel() {
-  reservationStatus = document.getElementById("status"); //클릭 시점에 불러옴
+  reservationStatus = document.querySelector(".status"); //클릭 시점에 불러옴
   reservationStatus.innerText = "예약취소";
   closeModal();
   checkStatus();
@@ -37,8 +37,7 @@ confirmCancelBtn.addEventListener("click", confirmedCancel);
 cancelCancelBtn.addEventListener("click", canceledCancel);
 
 function checkStatus() {
-  reservationStatus = document.getElementById("status");
-
+  reservationStatus = document.querySelector(".status");
   if (reservationStatus.innerText === "예약취소") {
     cancelBtn.disabled = true;
   } else {
